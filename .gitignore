@@ -1,0 +1,15 @@
+.sass-cache/
+node_modules
+
+tmp/*
+lib/tmp/*
+log/*.log
+dump/
+
+lib/client/*.js
+lib/client/**/*.js
+!lib/client/vendor/*.js
+
+public/json/*.temp.json
+public/css/_*.css
+public/browserify.js
