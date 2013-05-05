@@ -3,6 +3,8 @@ $       = require "jquery"
 _       = require "underscore"
 moment  = require "moment"
 
+creds   = require "../../config/creds"
+
 stats = [
   {long: "Batting Average", short: "Avg", type: "float"}
   {long: "Home Runs (Batter)", short: "HR", type: "int"}
@@ -145,13 +147,14 @@ onStandings = (e, r, body) ->
   docs = createDocs throughDate, season, byTeam
 
 getStats = ->
+  console.log "fetching rotowire stats at #{new Date}"
   opts = 
     uri: "http://www.rotowire.com/users/signon.htm"
     followRedirects: true
     followAllRedirects: true
     form: 
-      p1: "3clr465"
-      UserName: "tphummel"
+      p1: creds.pass
+      UserName: creds.user
       submit: "Login"
       link: "/mlbcommish13/standingstext.htm?leagueid=420"
       x: 31
