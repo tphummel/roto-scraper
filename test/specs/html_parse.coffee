@@ -108,6 +108,7 @@ createDocs = (throughDate, season, byTeam) ->
       season: season
       rank: stats.Total.rank
       points: stats.Total.points
+      created_at: new Date()
       stats: {}
     
     for stat, detail of stats
