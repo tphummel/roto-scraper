@@ -13,3 +13,5 @@ lib/client/**/*.js
 public/json/*.temp.json
 public/css/_*.css
 public/browserify.js
+
+config/creds.coffee
