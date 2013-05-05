@@ -7,7 +7,8 @@
     "coffee-script": "~1.6.2",
     "request": "~2.21.0",
     "underscore": "~1.4.4",
-    "jquery": "~1.8.3"
+    "jquery": "~1.8.3",
+    "moment": "~2.0.0"
   },
   "devDependencies": {
     "mocha": "~1.9.0",
