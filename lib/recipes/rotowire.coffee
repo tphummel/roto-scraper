@@ -156,7 +156,7 @@ getStats = (cb) ->
       p1: creds.pass
       UserName: creds.user
       submit: "Login"
-      link: "/mlbcommish13/standingstext.htm?leagueid=420"
+      link: "/mlbcommish13/standingstext.htm?leagueid=#{creds.leagueId}"
       x: 31
       y: 16
 
