@@ -1,5 +1,2 @@
-getRotowireStats = require "../recipes/rotowire"
-# console.log "getRotowireStats: ", getRotowireStats
-console.log "fetching..."
-
-getRotowireStats()
+{getStats, onStandings} = require "../recipes/rotowire"
+getStats (e, r, b) -> console.log b
