@@ -3,7 +3,7 @@ $       = require "jquery"
 _       = require "underscore"
 moment  = require "moment"
 
-creds   = require "../../config/creds"
+creds   = (require __dirname+"/../../config/creds").rotowire
 
 stats = [
   {long: "Batting Average", short: "Avg", type: "float"}
@@ -146,7 +146,7 @@ onStandings = (e, r, body) ->
 
   docs = createDocs throughDate, season, byTeam
 
-getStats = ->
+getStats = (cb) ->
   console.log "fetching rotowire stats at #{new Date}"
   opts = 
     uri: "http://www.rotowire.com/users/signon.htm"
@@ -160,7 +160,9 @@ getStats = ->
       x: 31
       y: 16
 
-  request.post opts, onStandings
+  console.log "opts: ", opts
+
+  request.post opts, cb
 
 module.exports = 
   getStats: getStats
