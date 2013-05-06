@@ -160,8 +160,6 @@ getStats = (cb) ->
       x: 31
       y: 16
 
-  console.log "opts: ", opts
-
   request.post opts, cb
 
 module.exports = 
