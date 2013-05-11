@@ -70,7 +70,7 @@ doStats = (statGroups, byTeam) ->
       if statDetail.type is "float"
         stat = parseFloat stat
       else if statDetail.type is "int"
-        stat = parseInt stat
+        stat = parseInt stat, 10
 
       byTeam[team][statDetail.short].stat = stat
 
