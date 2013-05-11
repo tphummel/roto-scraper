@@ -79,15 +79,15 @@ doRanks = (byTeam) ->
   rank = 0
   count = 0
   prevPoints = null
-  for team, stats of byTeam
+  for team, statObjs of byTeam
     rank += 1
     count += 1
-    points = stats.Total.points
+    points = statObjs.Total.points
     if points is prevPoints
-      stats.Total.rank = prevRank
+      statObjs.Total.rank = prevRank
     else
-      stats.Total.rank = rank
-    prevRank = stats.Total.rank
+      statObjs.Total.rank = rank
+    prevRank = statObjs.Total.rank
     prevPoints = points
 
 groupLines = (lines) ->
@@ -101,17 +101,18 @@ groupLines = (lines) ->
 
 createDocs = (throughDate, season, byTeam) ->
   docs = []
-  docs = _.map byTeam, (stats, team) ->
+  docs = _.map byTeam, (statObjs, team) ->
+
     doc = 
       thru_date: throughDate
       team: team
       season: season
-      rank: stats.Total.rank
-      points: stats.Total.points
+      rank: statObjs.Total.rank
+      points: statObjs.Total.points
       created_at: new Date()
       stats: {}
     
-    for stat, detail of stats
+    for stat, detail of statObjs
       unless stat is "Total"
         doc.stats[stat] = detail
 
