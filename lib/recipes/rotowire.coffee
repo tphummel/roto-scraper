@@ -99,13 +99,14 @@ groupLines = (lines) ->
 
   statGroups = statGroups.slice 0, -1
 
-createDocs = (throughDate, season, byTeam) ->
+createDocs = (throughDate, season, league, byTeam) ->
   docs = []
   docs = _.map byTeam, (statObjs, team) ->
 
     doc = 
       thru_date: throughDate
       team: team
+      league: league
       season: season
       rank: statObjs.Total.rank
       points: statObjs.Total.points
@@ -134,6 +135,7 @@ onStandings = (e, r, body) ->
   
   throughDate = getThroughDate lines
   season = getSeason throughDate
+  league = "rotowire_#{creds.leagueId}"
 
   csvOverall = lines.slice 1,14
   doOverall csvOverall, byTeam
@@ -145,7 +147,7 @@ onStandings = (e, r, body) ->
 
   doRanks byTeam
 
-  docs = createDocs throughDate, season, byTeam
+  docs = createDocs throughDate, season, league, byTeam
 
 getStats = (cb) ->
   console.log "fetching rotowire stats at #{new Date}"
