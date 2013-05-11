@@ -131,7 +131,10 @@ onStandings = (e, r, body) ->
   byTeam = {}
 
   content = $(body).find(".content").text()
-  lines = (content.split "\n").filter (line) -> line.length > 0
+  
+  lines = content.split "\n"
+  lines = lines.map (line) -> line.replace /(\r|\t)/gm, ""
+  lines = lines.filter (line) -> line.length > 0
   
   throughDate = getThroughDate lines
   season = getSeason throughDate
