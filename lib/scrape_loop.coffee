@@ -1,6 +1,8 @@
 async = require "async"
-{getStats, onStandings} = require "../recipes/rotowire"
-{standings} = require "../db"
+moment = require "moment"
+fs = require "fs"
+{getStats, onStandings} = require "./recipes/rotowire"
+{standings} = require "./db"
 
 saveDoc = (doc, cb) ->
   q = 
@@ -14,6 +16,8 @@ saveDocs = (docs, cb) -> async.each docs, saveDoc, cb
 
 scrapeNow = ->
   getStats (e,r,b) ->
+    date = moment().format("YYYY-MM-DD")
+    fs.writeFileSync __dirname+"/../data/rotowire/#{date}.html", b
     console.log "e: ", e if e
     docs = onStandings e, r, b
     byDate = {}
@@ -27,3 +31,4 @@ scrapeNow = ->
 
 loopInterval = 60 * 1000 * 60 * 6 # every 6 hours
 setInterval scrapeNow, loopInterval
+scrapeNow()
