@@ -16,14 +16,15 @@ saveDocs = (docs, cb) -> async.each docs, saveDoc, cb
 
 scrapeNow = ->
   getStats (e,r,b) ->
-    date = moment().format("YYYY-MM-DD")
-    fs.writeFileSync __dirname+"/../data/rotowire/#{date}.html", b
-    console.log "e: ", e if e
     docs = onStandings e, r, b
     byDate = {}
     for doc in docs
       byDate[doc.thru_date] ?= 0
       byDate[doc.thru_date] += 1
+    date = (Object.keys byDate)[0]
+
+    fs.writeFileSync __dirname+"/../data/rotowire/t#{date}.html", b
+    console.log "e: ", e if e
 
     saveDocs docs, (e) ->
       console.log "e: ", e if e
