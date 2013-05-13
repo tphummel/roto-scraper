@@ -10,7 +10,10 @@
     "jquery": "~1.8.3",
     "moment": "~2.0.0",
     "mongolian": "~0.1.18",
-    "async": "~0.2.8"
+    "async": "~0.2.8",
+    "through": "~2.3.4",
+    "JSONStream": "~0.6.4",
+    "express": "~3.2.4"
   },
   "devDependencies": {
     "mocha": "~1.9.0",
