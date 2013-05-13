@@ -1,2 +1,26 @@
-{getStats, onStandings} = require "../recipes/rotowire"
-getStats (e, r, b) -> console.log b
+express = require "express"
+
+app = express()
+
+logRoute = (req, res, next) ->
+  meta = 
+    timestamp: new Date()
+    path: req.path
+    query: req.query
+    msg: "route"
+    
+  console.log (JSON.stringify meta)
+  
+  next()
+
+app.use express.bodyParser()
+app.use logRoute
+app.use app.router
+
+{version} = require '../../package.json'
+app.get '/health', (req, res) -> res.json {status: 'ok', time: new Date, version: version}
+
+port = process.env.PORT || 3000
+app.listen port 
+
+console.log "roto-scraper running on port #{port}"
