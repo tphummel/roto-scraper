@@ -97,7 +97,10 @@ groupLines = (lines) ->
     statGroups[groupIx] ?= []
     statGroups[groupIx].push line
 
-  statGroups = statGroups.slice 0, -1
+  if statGroups[statGroups.length-1][0] isnt 'Wins'
+    statGroups = statGroups.slice 0, -1
+
+  statGroups
 
 createDocs = (throughDate, season, league, byTeam) ->
   docs = []
