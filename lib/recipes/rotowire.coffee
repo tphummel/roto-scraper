@@ -156,7 +156,6 @@ onStandings = (e, r, body) ->
   docs = createDocs throughDate, season, league, byTeam
 
 getStats = (cb) ->
-  console.log "fetching rotowire stats at #{new Date}"
   opts = 
     uri: "http://www.rotowire.com/users/signon.htm"
     followRedirects: true
