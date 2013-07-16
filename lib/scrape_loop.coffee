@@ -4,6 +4,17 @@ fs = require "fs"
 {getStats, onStandings} = require "./recipes/rotowire"
 {standings} = require "./db"
 
+activeRecipes = ["rotowire"]
+
+getActiveRecipes = ->
+  recipes = {}
+  (fs.readdirSync __dirname+"/recipes").forEach (file) ->
+    shortFile = file.split(".")[0]
+    if shortFile in activeRecipes
+      recipe = require __dirname+"/recipes/"+file
+      recipes[shortFile] = recipe
+  return recipes
+
 saveDoc = (doc, cb) ->
   q = 
     league: doc.league
