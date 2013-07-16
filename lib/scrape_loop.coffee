@@ -39,11 +39,13 @@ scrapeNow = ->
 
     scrapeDate = getScrapeDate docs
     fs.writeFileSync __dirname+"/../data/rotowire/t#{scrapeDate}.html", b
-    console.log "e: ", e if e
 
     saveDocs docs, (e) ->
-      console.log "e: ", e if e
-      console.log "done scraping & saving: thru #{scrapeDate} at #{new Date}"
+      meta = 
+        timestamp: new Date
+        msg: "scrape"
+        status: e or "ok"
+      console.log (JSON.stringify meta)
 
 loopInterval = 60 * 1000 * 60 * 6 # every 6 hours
 setInterval scrapeNow, loopInterval
