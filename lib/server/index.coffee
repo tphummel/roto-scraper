@@ -20,6 +20,8 @@ app.use app.router
 {version} = require '../../package.json'
 app.get '/health', (req, res) -> res.json {status: 'ok', time: new Date, version: version}
 
+scrapeLoop = require "../scrape_loop"
+
 port = process.env.PORT || 3000
 app.listen port 
 
