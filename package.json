@@ -1,6 +1,6 @@
 {
   "name": "roto-scraper",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "scraping rotisserie stats",
   "main": "index.js",
   "dependencies": {
