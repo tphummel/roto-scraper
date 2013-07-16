@@ -1,17 +1,20 @@
-.sass-cache/
-node_modules
+.vagrant
+Berksfile.lock
+*~
+*#
+.#*
+\#*#
+.*.sw[a-z]
+*.un~
+/cookbooks
 
-tmp/*
-lib/tmp/*
-log/*.log
-dump/
-
-lib/client/*.js
-lib/client/**/*.js
-!lib/client/vendor/*.js
-
-public/json/*.temp.json
-public/css/_*.css
-public/browserify.js
+# Bundler
+Gemfile.lock
+bin/*
+.bundle/*
+/cookbooks/
 
 config/creds.coffee
+node_modules/
+data/**/mongodb/
+*.rdb
