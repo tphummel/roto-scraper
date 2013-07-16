@@ -47,6 +47,6 @@ scrapeNow = ->
         status: e or "ok"
       console.log (JSON.stringify meta)
 
-loopInterval = 60 * 1000 * 60 * 6 # every 6 hours
+loopInterval = 60 * 1000 * 60 * 8 # every 8 hours
 setInterval scrapeNow, loopInterval
 scrapeNow()
