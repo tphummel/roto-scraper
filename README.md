@@ -27,3 +27,15 @@ then i set up a cron task to run the script sometime after the standings have be
 temporary, save raw html to file:
 
     node index.js > data/rotowire/2013-04-09.html
+
+## api
+
+- /standings/:date
+
+- /standings/:team
+
+- /standings/:team?dateStart=&dateEnd=
+
+- /standings/?dateStart=&dateEnd=
+
+- /standings
