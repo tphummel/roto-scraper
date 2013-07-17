@@ -1,4 +1,5 @@
 express = require "express"
+standings = require "./standings"
 
 app = express()
 
@@ -19,6 +20,7 @@ app.use app.router
 
 {version} = require '../../package.json'
 app.get '/health', (req, res) -> res.json {status: 'ok', time: new Date, version: version}
+app.get '/standings/:date', standings.index
 
 scrapeLoop = require "../scrape_loop"
 
