@@ -109,6 +109,18 @@ NGINX
 
 end
 
+namespace :config do
+  desc "create shared/config directory"
+  task :create_dir, :roles => :app do
+    run "mkdir -p #{shared_path}/config"
+  end
+
+  desc "make symlink for config/creds.coffee"
+  task :create_symlink, :roles => :app do
+    run "ln -nfs #{shared_path}/config/creds.coffee #{release_path}/config/creds.coffee"
+  end
+end
+
 namespace :node_modules do
   desc "create node modules directory"
   task :create_dir, :roles => :app do
@@ -116,7 +128,7 @@ namespace :node_modules do
   end
 
   desc "make symlink for node modules"
-  task :symlink, :roles => :app do
+  task :create_symlink, :roles => :app do
     run "ln -nfs #{shared_path}/node_modules #{release_path}/node_modules"
   end
 end
@@ -131,6 +143,6 @@ namespace :git do
 end
 
 before 'deploy:setup', 'deploy:create_deploy_to'
-after 'deploy:setup', 'node_modules:create_dir', 'deploy:write_upstart_script', 'deploy:write_nginx_config', 'deploy:touch_log'
+after 'deploy:setup', 'node_modules:create_dir', 'config:create_dir','deploy:write_upstart_script', 'deploy:write_nginx_config', 'deploy:touch_log'
 
-after "deploy:finalize_update", "node_modules:symlink", "deploy:update_submodules", "deploy:update_packages"
+after "deploy:finalize_update", "node_modules:create_symlink", "config:create_symlink", "deploy:update_submodules", "deploy:update_packages"
