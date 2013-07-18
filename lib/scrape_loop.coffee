@@ -45,6 +45,7 @@ scrapeNow = ->
         timestamp: new Date
         msg: "scrape"
         status: e or "ok"
+        date: scrapeDate
       console.log (JSON.stringify meta)
 
 loopInterval = 60 * 1000 * 60 * 8 # every 8 hours
