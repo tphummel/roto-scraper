@@ -1,3 +1,7 @@
+0.1.2 / 2013-07-18
+==================
+  - scrape_loop: log the thruDate completed
+
 0.1.1 / 2013-07-15
 ==================
   - created first api endpoint /standings/:date
