@@ -3,7 +3,7 @@
 
 Vagrant.configure("2") do |config|
 
-  config.vm.hostname = "arima-deps-cookbook-berkshelf"
+  config.vm.hostname = "roto-scraper-berkshelf"
 
   config.vm.box = "precise64"
   config.vm.box_url = "http://dl.dropbox.com/u/1537815/precise64.box"
@@ -29,7 +29,8 @@ Vagrant.configure("2") do |config|
      }
    }
    chef.run_list = [
-      "recipe[arima-deps-cookbook::default]"
+      "recipe[sec-base::default]",
+      "recipe[app-base-lnmn::default]"
    ]
   end
 end
