@@ -13,7 +13,8 @@
     "async": "~0.2.8",
     "through": "~2.3.4",
     "JSONStream": "~0.6.4",
-    "express": "~3.2.4"
+    "express": "~3.2.4",
+    "connect-health-check": "~0.2.0"
   },
   "devDependencies": {
     "mocha": "~1.9.0",
