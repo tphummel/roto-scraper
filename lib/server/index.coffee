@@ -8,7 +8,6 @@ app = express()
 app.configure ->
   app.use healthCheck
   app.use express.json()
-  app.use app.router
   app.use express.static './public', {maxAge: 86400000}
 
   express.logger.token 'ts', -> (new Date).toISOString()
