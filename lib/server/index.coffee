@@ -1,30 +1,28 @@
 express = require "express"
-standings = require "./standings"
+api = require "./api"
+{version} = require '../../package.json'
 
 app = express()
 
-logRoute = (req, res, next) ->
-  meta = 
-    timestamp: new Date()
-    path: req.path
-    query: req.query
-    msg: "route"
-    
-  console.log (JSON.stringify meta)
-  
-  next()
-
-app.use express.bodyParser()
-app.use logRoute
+app.use express.json()
 app.use app.router
+app.use express.static './public', {maxAge: 86400000}
+express.logger.token 'ts', -> (new Date).toISOString()
+app.use express.logger JSON.stringify 
+  ts: ':ts'
+  method: ':method'
+  url: ':url'
+  status: ':status'
+  ip: ':remote-addr'
+  response_time: ':response-time'
 
-{version} = require '../../package.json'
-app.get '/health', (req, res) -> res.json {status: 'ok', time: new Date, version: version}
-app.get '/standings/:date', standings.index
+app.get '/api/health', (req, res) -> res.json {status: 'ok', time: new Date, version: version}
+app.get '/api/standings/:date', api.standings.byDate
+
 
 scrapeLoop = require "./scrape_loop"
 
-port = process.env.PORT || 3000
+port = process.env.PORT or 3000
 app.listen port 
 
 console.log "roto-scraper running on port #{port}"

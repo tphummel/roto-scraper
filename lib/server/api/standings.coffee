@@ -1,14 +1,13 @@
-mongo_stream = require "./mongo_stream"
+mongoStream = require "../mongo_stream"
+{standings} = require "../db"
 
-{standings} = require "./db"
-
-index = (req, res) ->
+byDate = (req, res) ->
   date = req.params.date
   query = standings.find {thru_date: date}
   
-  mongo_stream 
+  mongoStream 
     query: query
     response: res
       
 module.exports = 
-  index: index
+  byDate: byDate
