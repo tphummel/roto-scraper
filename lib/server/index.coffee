@@ -19,6 +19,9 @@ app.configure ->
     ip: ':remote-addr'
     response_time: ':response-time'
 
+app.set 'views', './views'
+
+app.get  '/', (req, res) -> res.render 'index.jade'
 app.get '/api/standings/:date', api.standings.byDate
 
 scrapeLoop = require "./scrape_loop"
