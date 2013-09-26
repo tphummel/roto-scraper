@@ -1,0 +1,19 @@
+html {
+  padding: 40px;
+}
+
+#container {
+  text-align: center;
+}
+
+#current-user {
+  margin-top: 20px;
+}
+
+#not-logged-in {
+  margin-top: 200px;
+}
+
+.or {
+  margin: 0 10px;
+}
