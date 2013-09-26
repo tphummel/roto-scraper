@@ -18,3 +18,5 @@ config/creds.coffee
 node_modules/
 data/**/mongodb/
 *.rdb
+
+public/main.js
