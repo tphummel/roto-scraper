@@ -3,7 +3,7 @@ $       = require "jquery"
 _       = require "underscore"
 moment  = require "moment"
 
-creds   = (require __dirname+"/../../config/creds").rotowire
+creds   = (require __dirname+"/../../../config/creds").rotowire
 
 stats = [
   {long: "Batting Average", short: "Avg", type: "float"}

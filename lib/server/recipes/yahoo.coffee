@@ -1,5 +1,5 @@
 request = require "request"
-creds = (require __dirname+"/../../config/creds").yahoo
+creds = (require __dirname+"/../../../config/creds").yahoo
 
 onStandings = (e, r, body) ->
   console.log "e: ", e if e?

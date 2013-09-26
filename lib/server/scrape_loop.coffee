@@ -38,7 +38,7 @@ scrapeNow = ->
     docs = onStandings e, r, b
 
     scrapeDate = getScrapeDate docs
-    fs.writeFileSync __dirname+"/../data/rotowire/t#{scrapeDate}.html", b
+    fs.writeFileSync __dirname+"/../../data/rotowire/t#{scrapeDate}.html", b
 
     saveDocs docs, (e) ->
       meta = 

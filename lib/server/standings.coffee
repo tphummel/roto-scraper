@@ -1,6 +1,6 @@
-mongo_stream = require "../mongo_stream"
+mongo_stream = require "./mongo_stream"
 
-{standings} = require "../db"
+{standings} = require "./db"
 
 index = (req, res) ->
   date = req.params.date

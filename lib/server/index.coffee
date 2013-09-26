@@ -22,7 +22,7 @@ app.use app.router
 app.get '/health', (req, res) -> res.json {status: 'ok', time: new Date, version: version}
 app.get '/standings/:date', standings.index
 
-scrapeLoop = require "../scrape_loop"
+scrapeLoop = require "./scrape_loop"
 
 port = process.env.PORT || 3000
 app.listen port 
