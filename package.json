@@ -25,11 +25,13 @@
   },
   "devDependencies": {
     "mocha": "~1.9.0",
-    "chai": "~1.6.0"
+    "chai": "~1.6.0",
+    "deadreload": "0.0.0",
+    "supervisor": "~0.5.6"
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "supervisor -n exit -i public -e js,coffee index",
+    "dev": "./node_modules/.bin/supervisor -n exit -i public -e js,coffee,jade,scss index",
     "test": "./node_modules/.bin/mocha"
   },
   "author": "Tom Hummel",
