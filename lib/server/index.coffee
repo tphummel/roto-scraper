@@ -3,6 +3,7 @@ healthCheck   = require "connect-health-check"
 
 bundle  = require "./bundle"
 api     = require "./api"
+reports = require "./reports"
 
 app = express()
 app.configure ->
@@ -19,10 +20,11 @@ app.configure ->
     ip: ':remote-addr'
     response_time: ':response-time'
 
-app.set 'views', './views'
+app.set 'views', './lib/server/views'
+app.get '/', (req, res) -> res.render 'index.jade'
 
-app.get  '/', (req, res) -> res.render 'index.jade'
 app.get '/api/standings/:date', api.standings.byDate
+reports app
 
 scrapeLoop = require "./scrape_loop"
 
