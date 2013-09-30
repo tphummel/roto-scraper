@@ -1,0 +1,38 @@
+!!! 5
+html
+  head
+    include ../includes/head
+  
+  body
+    include ../includes/nav
+
+    .container.controls
+      .date-picker
+        | hi
+
+    #container
+      if standings.length == 0
+        h1 No Standings for this date
+      else
+        table.table.table-striped.table-bordered.table-hover.table-condensed
+
+          - var tm1 = standings[0]
+          tr
+            th Rank
+            th Team
+            th Points
+            each val, key in tm1.stats
+              th #{key}
+
+          each tm in standings
+            tr 
+              td #{tm.rank}
+              td #{tm.team}
+              td #{tm.points}
+
+              each val, key in tm.stats
+
+                td #{val.points}
+
+        
+    include ../includes/foot
