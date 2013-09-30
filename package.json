@@ -9,7 +9,6 @@
     "underscore": "~1.4.4",
     "jquery": "~1.8.3",
     "moment": "~2.0.0",
-    "mongolian": "~0.1.18",
     "async": "~0.2.8",
     "through": "~2.3.4",
     "JSONStream": "~0.6.4",
@@ -21,7 +20,8 @@
     "simple-jadeify": "~2.0.1",
     "sassify": "~0.1.1",
     "directify": "~0.1.2",
-    "backbone": "~1.0.0"
+    "backbone": "~1.0.0",
+    "mongo-collection": "~0.1.1"
   },
   "devDependencies": {
     "mocha": "~1.9.0",
