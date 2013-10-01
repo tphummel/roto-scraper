@@ -1,18 +1,14 @@
-.navbar.navbar-inverse.navbar-fixed-top
-  .navbar-inner
-    .container
-      button.btn.btn-navbar(type='button', data-toggle='collapse', data-target='.nav-collapse')
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
-      a.brand(href='#/') Roto-Scraper
-      .nav-collapse.collapse
-        ul.nav
-          li.active
-            a(href='/') Home
-          li
-            a(href='/thru-date') Thru Date
-          li
-            a(href='/diff') Diff
-          li
-            a(href='/perfs') Top Perfs
+nav(class="navbar navbar-inverse", role="navigation")
+  .navbar-header
+    a.navbar-brand(href='/') Roto-Scraper
+
+  ul.nav.navbar-nav
+    
+    li(class=(path.match(/^\/?$/) ? "active" : ""))
+      a(href='/') Home
+    li(class=(path.match(/^\/thru-date/) ? "active" : ""))
+      a(href='/thru-date') Thru Date
+    li(class=(path.match(/^\/diff/) ? "active" : ""))
+      a(href='/diff') Diff
+    li(class=(path.match(/^\/perfs/) ? "active" : ""))
+      a(href='/perfs') Top Perfs
