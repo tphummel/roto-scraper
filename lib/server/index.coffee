@@ -21,7 +21,7 @@ app.configure ->
     response_time: ':response-time'
 
 app.set 'views', './lib/server/views'
-app.get '/', (req, res) -> res.render 'index.jade'
+app.get '/', (req, res) -> res.render 'index.jade', {path: req.path}
 
 app.get '/api/standings/:date', api.standings.byDate
 reports app
