@@ -6,33 +6,56 @@ html
   body
     include ../includes/nav
 
-    .container.controls
-      .date-picker
-        | hi
+    .container
+        h2 Standings Thru Date
 
-    #container
+    .container
+      form(class="form-inline", role="form")
+        .form-group
+
+          label(
+            for="report-date"
+            class="control-label sr-only"
+          ) Date: 
+
+          input(
+            id="report-date"
+            class="form-control"
+            type="date", 
+            placeholder="YYYY-MM-DD", 
+            value=date
+          )
+
+          button(
+            type="button"
+            class="btn btn-default thru-date"
+          ) Run
+
+
+    .container
       if standings.length == 0
         h1 No Standings for this date
       else
-        table.table.table-striped.table-bordered.table-hover.table-condensed
+        table.table.table-striped.table-bordered.table-hover.table-condensed.sortable
+          thead
 
-          - var tm1 = standings[0]
-          tr
-            th Rank
-            th Team
-            th Points
-            each val, key in tm1.stats
-              th #{key}
+            - var tm1 = standings[0]
+            tr
+              th Rank
+              th Team
+              th Points
+              each val, key in tm1.stats
+                th #{key}
+          tbody
+            each tm in standings
+              tr 
+                td #{tm.rank}
+                td #{tm.team}
+                td #{tm.points}
 
-          each tm in standings
-            tr 
-              td #{tm.rank}
-              td #{tm.team}
-              td #{tm.points}
+                each val, key in tm.stats
 
-              each val, key in tm.stats
-
-                td #{val.points}
+                  td #{val.stat}
 
         
     include ../includes/foot

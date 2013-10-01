@@ -9,4 +9,10 @@ module.exports = (req, res) ->
     .sort({rank: 1})
 
   query.toArray (err, result) ->
-    res.render "reports/thru-date.jade", {standings: result}
+
+    data = 
+      standings: result
+      date: date
+      path: req.route.path
+
+    res.render "reports/thru-date.jade", data
