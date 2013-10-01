@@ -7,6 +7,7 @@ sassify         = require 'sassify'
 vendor = [
   './lib/client/vendor/jquery.min.js'
   './lib/client/vendor/bootstrap.js'
+  './lib/client/vendor/bootstrap-sortable.js'
 ]
 
 opts =
