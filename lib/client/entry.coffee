@@ -1,6 +1,7 @@
-main = require "./main/index.coffee"
-
 $(document).ready ->
+
+  # reverse sorting dingbats
+  $.bootstrapSortable true, 'reversed'
   
   $("button.thru-date").click ->
     date = $("#report-date").val()
