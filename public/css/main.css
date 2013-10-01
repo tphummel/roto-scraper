@@ -1,19 +1,16 @@
 html {
-  padding: 40px;
+  padding: 10px;
 }
 
-#container {
-  text-align: center;
-}
-
-#current-user {
-  margin-top: 20px;
-}
-
-#not-logged-in {
-  margin-top: 200px;
+body {
+  padding-bottom: 70px;
 }
 
 .or {
   margin: 0 10px;
+}
+
+.container {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
