@@ -1,5 +1,4 @@
 db = require "../db"
-module.exports = 
 
 module.exports = (req, res) ->
   date = req.params.date
