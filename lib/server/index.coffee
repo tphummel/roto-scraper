@@ -26,7 +26,8 @@ app.get '/', (req, res) -> res.render 'index.jade', {path: req.path}
 app.get '/api/standings/:date', api.standings.byDate
 reports app
 
-scrapeLoop = require "./scrape_loop"
+# WE"RE IN THE OFFSEASON
+# scrapeLoop = require "./scrape_loop"
 
 port = process.env.PORT or 3000
 app.listen port 
