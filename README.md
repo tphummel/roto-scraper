@@ -2,6 +2,10 @@
 
 scrapes rotisserie stats and saves to mongodb
 
+## deploy
+bundle exec knife solo bootstrap tom@198.199.109.183 --bootstrap-version=10.26.0
+
+
 ## setup
 
 create config/ dir in project root
@@ -39,3 +43,20 @@ temporary, save raw html to file:
 - /standings/?dateStart=&dateEnd=
 
 - /standings
+
+
+## reports
+
+- standings for single date
+- standings change over date span
+- current standings with change t-1, t-7, t-14, t-21, t-28
+- largest single day change by category (category drop down)
+
+## TODO
+- deploy node 10 to donaldson
+- diff & thru-date
+  - optional format fn (rounding)
+  - toggle stat / pts
+- deploy app
+- email link to league
+- "last scraped" timestamp in header
