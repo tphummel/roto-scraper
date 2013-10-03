@@ -1,0 +1,75 @@
+!!! 5
+html
+  head
+    include ../includes/head
+  
+  body
+    include ../includes/nav
+
+    .container
+        h2 Diff
+
+    .container
+      form(class="form-inline", role="form")
+        .form-group
+
+          label(
+            for="report-date-start"
+            class="control-label sr-only"
+          ) Date: 
+
+          input(
+            id="report-date-start"
+            class="form-control"
+            type="date", 
+            placeholder="YYYY-MM-DD", 
+            value=dateStart
+          )
+
+          label(
+            for="report-date-end"
+            class="control-label sr-only"
+          ) Date: 
+
+          input(
+            id="report-date-end"
+            class="form-control"
+            type="date", 
+            placeholder="YYYY-MM-DD", 
+            value=dateEnd
+          )
+
+          button(
+            type="button"
+            class="btn btn-default diff"
+          ) Run
+
+
+    .container
+      if standings.length == 0
+        h1 No Standings for this date
+      else
+        table.table.table-striped.table-bordered.table-hover.table-condensed.sortable
+          thead
+            tr
+              th Rank
+              th Team
+              th Points
+              each key in categories
+                th #{key}
+
+          tbody
+            each tm in standings
+              tr 
+                - var rk = tm.total.stat
+                td(class=(rk < 0 ? "danger" : (rk > 0 ? "success" : "") )) #{rk}
+                td #{tm.team}
+                - var pts = tm.total.points
+                td(class=(pts < 0 ? "danger" : (pts > 0 ? "success" : "") )) #{pts}
+
+                each key in categories
+                  - var stat = tm[key].stat
+                  td(class=(stat < 0 ? "danger" : (stat > 0 ? "success" : "") )) #{stat}
+
+        
+    include ../includes/foot
