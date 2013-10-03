@@ -1,3 +1,9 @@
+0.2.0 / 2013-10-03
+==================
+  - reports:
+    - diff & thru-date
+  - scrape_loop: turned off for the offseason
+
 0.1.2 / 2013-07-18
 ==================
   - scrape_loop: log the thruDate completed
