@@ -1,5 +1,12 @@
 db = require "../db"
 
+roundRatio = (val) -> return val.toFixed 4
+
+transforms = 
+  WHIP: roundRatio
+  ERA: roundRatio
+  Avg: roundRatio
+
 module.exports = (req, res) ->
   dateStart = req.params.dateStart
   dateEnd = req.params.dateEnd
@@ -45,13 +52,15 @@ diffMapped = (rptDates, mapped) ->
         points: end[category].points - start[category].points
         stat: end[category].stat - start[category].stat
 
+      if transforms[category]?
+        diff.stat = transforms[category] diff.stat
+
       final[team][category] = diff
 
   return final
       
 byTeamDate = (data) ->
   mapped = {}
-
   for rec in data
     tm = mapped[rec.team] ?= {}
 
