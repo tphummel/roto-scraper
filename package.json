@@ -17,10 +17,6 @@
     "coffeeify": "~0.5.1",
     "browserify": "~2.33.0",
     "jade": "~0.35.0",
-    "simple-jadeify": "~2.0.1",
-    "sassify": "~0.1.1",
-    "directify": "~0.1.2",
-    "backbone": "~1.0.0",
     "mongo-collection": "~0.1.1"
   },
   "devDependencies": {
@@ -38,6 +34,6 @@
   "license": "BSD",
   "optionalDependencies": {},
   "engines": {
-    "node": "*"
+    "node": ">=0.10"
   }
 }
