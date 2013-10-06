@@ -1,7 +1,7 @@
 assert  = require("chai").assert
 fs      = require "fs"
 
-rotowire = require __dirname+"/../../lib/recipes/rotowire"
+rotowire = require __dirname+"/../../lib/server/recipes/rotowire"
 
 describe "Rotowire", ->
   it "create final docs from raw html", ->
