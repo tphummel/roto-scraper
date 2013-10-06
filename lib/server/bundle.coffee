@@ -1,5 +1,6 @@
 fs              = require 'fs'
 browserify      = require 'browserify'
+coffeeify       = require 'coffeeify'
 
 
 vendor = [
@@ -18,6 +19,8 @@ bundle = browserify opts
 
 for js in vendor
   bundle.add js
+
+bundle.transform coffeeify
 
 bundle.add './lib/client/entry.coffee'
 
