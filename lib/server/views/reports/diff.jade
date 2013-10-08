@@ -45,6 +45,16 @@ html
             class="btn btn-default diff"
           ) Run
 
+        .form-group
+          label.radio
+            input(type="radio" id="ranks")
+            | Ranks
+
+          label.radio
+            input(type="radio" id="points")
+            | Points
+
+
 
     .container
       if standings.length == 0
