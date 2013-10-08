@@ -22,14 +22,19 @@ module.exports = (req, res) ->
       v.team = k
       standings.push v 
 
+    categories = []
+    if result[0]
+      categories = (Object.keys result[0].stats).slice 0, -1
+
     data = 
       standings: standings
-      categories: (Object.keys result[0].stats).slice 0, -1
+      categories: categories
       dateStart: dateStart
       dateEnd: dateEnd
       path: req.route.path
 
     res.render "reports/diff.jade", data
+
 
 doDiff = (rptDates, data) ->
   mapped = byTeamDate data
