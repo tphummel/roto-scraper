@@ -57,7 +57,8 @@ html
               th Team
               th Points
               each key in categories
-                th #{key}
+                each mode in ["stat", "points"]
+                  th(class=mode) #{key}
 
           tbody
             each tm in standings
@@ -69,8 +70,10 @@ html
                 td(class=(pts < 0 ? "danger" : (pts > 0 ? "success" : "") )) #{pts}
 
                 each key in categories
-                  - var stat = tm[key].stat
-                  td(class=(stat < 0 ? "danger" : (stat > 0 ? "success" : "") )) #{stat}
+                  each mode in ["stat", "points"]
+                    - var val = tm[key][mode]
+
+                    td(class="#{mode} "+(val < 0 ? "danger" : (val > 0 ? "success" : "") )) #{val}
 
         
     include ../includes/foot
