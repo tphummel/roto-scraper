@@ -1,3 +1,9 @@
+0.3.0 / 2013-10-09
+==================
+  - use bootstrap 3.0.0
+  - added GA to footer
+  - major improves to diff and thru-date reports
+
 0.2.0 / 2013-10-03
 ==================
   - reports:
