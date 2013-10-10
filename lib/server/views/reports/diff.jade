@@ -45,14 +45,13 @@ html
             class="btn btn-default diff"
           ) Run
 
+    .container
         .form-group
-          label.radio
-            input(type="radio" id="ranks")
-            | Ranks
+          label.radio Raw
+            input.diff(type="radio", name="column-group", value="stat")
 
-          label.radio
-            input(type="radio" id="points")
-            | Points
+          label.radio Points
+            input.diff(type="radio", name="column-group", value="points")
 
 
 
