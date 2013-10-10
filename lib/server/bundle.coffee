@@ -5,7 +5,7 @@ coffeeify       = require 'coffeeify'
 
 vendor = [
   './lib/client/vendor/jquery.min.js'
-  './lib/client/vendor/bootstrap.js'
+  './lib/client/vendor/bootstrap-3.0.0.js'
   './lib/client/vendor/bootstrap-sortable.js'
 ]
 
