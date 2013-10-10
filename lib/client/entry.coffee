@@ -1,16 +1,7 @@
-$(document).ready ->
+# reverse sorting dingbats
+$.bootstrapSortable true, 'reversed'
 
-  # reverse sorting dingbats
-  $.bootstrapSortable true, 'reversed'
-  
-  $("button.thru-date").click ->
-    date = $("#report-date").val()
-    window.location = "/thru-date/#{date}"
+require "./reports/thru-date.coffee"
+require "./reports/diff.coffee"
 
-  $("button.diff").click ->
-    dateStart = $("#report-date-start").val()
-    dateEnd = $("#report-date-end").val()
-    url = "/diff/#{dateStart}/#{dateEnd}"
-    window.location = url
-
-  console.log "entry loaded"
+console.log "entry loaded"
