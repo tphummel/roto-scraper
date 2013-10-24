@@ -17,7 +17,8 @@
     "browserify": "~2.33.0",
     "jade": "~0.35.0",
     "mongo-collection": "~0.1.1",
-    "coffeeify": "~0.5.1"
+    "coffeeify": "~0.5.1",
+    "newrelic": "~1.0.0"
   },
   "devDependencies": {
     "mocha": "~1.9.0",
