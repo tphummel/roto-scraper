@@ -1,20 +1,17 @@
-var http = require('http')
 var cheerio = require('cheerio')
 var moment = require('moment')
 
-function getUrl(url, cb) {
-  var req = http.get(url, function(res) {
-    var data = ''
+module.exports = scrapeStandings
 
-    res.on('data', function (chunk) {
-      data += chunk
-    })
-    res.on('end', function() {
-      cb(null, data)
-    })
+function scrapeStandings(text, cb){
+  var dom = cheerio.load(text)
+
+  return cb(null, {
+    standingsDate: getStandingsDate(dom),
+    seasonStandings: getSeasonStandings(dom),
+    weekStandings: getWeekStandings(dom),
+    categoryStandings: getCategoryStandings(dom)
   })
-
-  req.on('error', cb)
 }
 
 function getStandingsDate(dom){
@@ -103,29 +100,59 @@ function getWeekStandings(dom){
 function getCategoryStandings(dom){
   var tables = dom("table [cellpadding='2']")
   var catParentTable = tables[2]
+
+  var teams = {}
+
+  dom(catParentTable)
+    .children('tr')
+    .children('td')
+    .children('table')
+    .each(function(i){
+
+      var category = dom(this)
+        .children('tr')
+        .slice(0,1)
+        .text()
+
+      var keys = []
+      dom(this)
+        .children('tr')
+        .slice(1,2)
+        .children('th')
+        .each(function(j){
+          keys.push(dom(this).text().trim())
+        })
+
+      dom(this)
+        .children('tr')
+        .slice(2)
+        .each(function(k){
+
+          var teamName = dom(this)
+            .children('td')
+            .slice(0,1).text().trim()
+
+          if(!teams[teamName]){
+            teams[teamName] = {
+              team: teamName
+            }
+          }
+
+          if(!teams[teamName][category])
+            teams[teamName][category] = {}
+
+          dom(this)
+            .children('td')
+            .slice(1)
+            .each(function(l){
+              teams[teamName][category][keys[l+1]] = dom(this).text().trim()
+            })
+        })
+    })
+
+  var teamsArr = Object.keys(teams)
+    .map(function(team){
+      return teams[team]
+    })
+  return teamsArr
 }
-
-function scrapeStandings(text, cb){
-  var dom = cheerio.load(text)
-
-  standingsDate = getStandingsDate(dom)
-  seasonStandings = getSeasonStandings(dom)
-  weekStandings = getWeekStandings(dom)
-
-  var result = {
-    standingsDate: standingsDate,
-    seasonStandings: seasonStandings,
-    weekStandings: weekStandings
-  }
-
-  return cb(null, result)
-}
-
-function extractSeason(text, cb){
-
-}
-module.exports = {
-  scrapeStandings: scrapeStandings
-}
-
-
