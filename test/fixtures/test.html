@@ -1,0 +1,1226 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title> OnRoto - disrupt </title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link rel='icon' href='/favicon.ico' type='image/x-icon'>
+<link rel="stylesheet" type="text/css" href="http://baseball1.onroto.com/css/menu_styles_side_red.css">
+<link rel="stylesheet" type="text/css" href="http://baseball1.onroto.com/css/page_styles_red.css">
+<link rel="stylesheet" type="text/css" href="http://baseball1.onroto.com/css/jquery-ui-1.8.16.custom.css">
+
+<!--[if IE]>
+<style type="text/css" media="screen">
+#menu ul li {float: left; width: 100%;}
+</style>
+<![endif]-->
+<!--[if lt IE 7]>
+<style type="text/css" media="screen">
+body {
+behavior: url(http://baseball1.onroto.com/css/csshover.htc);
+font-size: 100%;
+}
+#menu ul li {float: left; width: 100%;}
+#menu ul li a {height: 1%;}
+
+#menu a, #menu h2, #menu h1, #menu h4 {
+font: bold 0.8em/1.6em arial, helvetica, sans-serif;
+}
+</style>
+<![endif]-->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://baseball1.onroto.com/baseball/webtest/javascript/jquery-ui-1.8.16.custom.min.js"></script>
+<script type="text/javascript" src="http://baseball1.onroto.com/baseball/webtest/javascript/touch_device.js"></script>
+
+<script type="text/javascript">
+var a = Math.floor(Math.random()*9999999999+1);
+var random_number = a;
+
+function clear_psearch()
+{
+  if(document.forms.player_search_form.psearch.value== "Player Search (use first init + last name)")
+  {
+    document.forms.player_search_form.psearch.value="";
+  }
+}
+function blur_psearch()
+{
+  if(document.forms.player_search_form.psearch.value == "")
+  {
+    document.forms.player_search_form.psearch.value="Player Search (use first init + last name)";
+  }
+}
+</script>
+
+</head>
+
+<body marginwidth="0" marginheight="0" onLoad="document.forms.player_search_form.psearch.blur()" align=center>
+<table width='1020' align='center' border=0 cellpadding=0 cellspacing=0>
+<tr>
+
+
+<!--  Logo, top left  -->
+<td class='nav_header_bg' width=180 height=120 rowspan=2 align="center" valign="middle" bgcolor="#cccccc">
+<a href="http://www.boxscorebaseball.com/" target="_blank"><img src="http://baseball1.onroto.com/images/boxscorelogo.jpg" border=0 width=100 height=105 alt=""></a>
+<div class=visit><em>2015 Leagues Now Forming</em></div>
+</td>
+
+<!--  Banner/league name, top center  -->
+<td class='nav_header_bg' width=840 align="center" height=100 valign="middle" bgcolor="#cccccc">
+
+<iframe width=760 align="top,middle" height="90" scrolling=no src="http://baseball1.onroto.com/baseball/webtest/adiframe.html" id='top_ad'></iframe>
+</td>
+</tr>
+<tr>
+
+<td class=nav_header_bg width=840 align="center" valign="middle"  class="league_name">
+<form method=post name="player_search_form" id="player_search_form" action="http://baseball1.onroto.com/baseball/webtest/player_search.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem">
+<table width="100%" cellpadding=0 cellspacing=0 border=0 bgcolor=cccccc>
+<tr>
+<td class='nav_header_bg' bgcolor=cccccc align=left>The Disruptive Startup</td>
+<td class='nav_header_bg' align=right bgcolor=cccccc>
+<input class="input10b" size=40 name="psearch" type="text" value="Player Search (use first init + last name)" id="psearch" onBlur="blur_psearch()" onfocus="clear_psearch()">
+&nbsp;
+<input class="input10b_grey" type=submit name=psearch_submit value="Go">
+</td></tr>
+</table>
+</form>
+</td>
+</tr>
+</table>
+<table width='1020' align='center' cellspacing=0 cellpadding=0 border=0>
+<tr>
+ <td class='nav_header_bg' bgcolor="#cccccc" valign=top align=center height=1200 width=180>
+<div id = "menu">
+<ul>
+  <li> <h2> OnRoto Site Navigation </h2>
+    <ul>
+      <li> <a href="http://baseball1.onroto.com/index.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> My OnRoto Account </a> </li>
+      <li> <a href="http://baseball1.onroto.com/baseball/webtest/site_map.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> League Site Map</a> </li>
+      <li> <a href="http://baseball1.onroto.com/baseball/webtest/team_home.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Team Home </a> </li>
+      <li> <a href="http://baseball1.onroto.com/baseball/webtest/m.home.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Mobile Friendly Team Home </a> </li>
+      <li> <a href="http://baseball1.onroto.com/baseball/webtest/updates.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Updates from OnRoto </a> </li>
+      <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_LFO.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem">Leagues Needing Owners</a> </li>
+      <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_tributes.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Member Tributes </a> </li>
+      <li> <a href="http://baseball1.onroto.com/baseball/webtest/payment_page.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Pay for League</a> </li>
+    </ul>
+  </li>
+</ul>
+<div class='stats_darker_grey'>
+&nbsp;<br>
+</div>
+<ul>
+  <li> <h2> League Pages </h2>
+    <ul>
+      <li> <a href="http://baseball1.onroto.com/baseball/webtest/mini_site_map.pl?disrupt+5+league_front_office&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Front Office </a>
+        <ul>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_uploads.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Constitution, etc </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_owner_info.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Owner Info </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_specs.pl?disrupt+5+basic&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> League Rules </a>
+            <ul>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_specs.pl?disrupt+5+basic&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Basic Set Up </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_specs.pl?disrupt+5+line_ups&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Line-ups and Rosters </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_specs.pl?disrupt+5+categories&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Scoring Categories </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_specs.pl?disrupt+5+aux_categories&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Display Categories </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_specs.pl?disrupt+5+transactions&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Transactions </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_trans_timeline.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Transaction Timeline </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_specs.pl?disrupt+5+free_agents&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Free Agents </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_specs.pl?disrupt+5+waivers&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Waivers </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_specs.pl?disrupt+5+bid_meister&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Bid Meister </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_specs.pl?disrupt+5+misc&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Miscellany </a> </li>
+            </ul>
+          </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_overrides.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Special Player Statuses  </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_stat_cor.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Stat Corrections </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_faab_summary.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> FAAB Summary </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/payment_page.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Pay for League </a> </li>
+        </ul>
+      </li>
+      <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_stand.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> League Standings </a>
+        <ul>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_stand.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Standings </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_alt_stand.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Alt Format Standings </a> </li>
+        </ul>
+      </li>
+      <li> <a href="http://baseball1.onroto.com/baseball/webtest/mini_site_map.pl?disrupt+5+league_team_stats&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Team Stats </a>
+        <ul>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+SORT_5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> My Team </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+SORT_5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Team by Team </a>
+            <ul>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+SORT_0&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Don Wily Quixotes</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+SORT_1&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Gormanic Depressives</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+SORT_2&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Coney Island</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+SORT_3&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Tokilla Mockers</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+SORT_4&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Zarr of Los Alamitos</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+SORT_5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Hummel Dingers</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+SORT_6&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> 2 Years & Counting</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+SORT_7&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> The G-Spots</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+SORT_8&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Sonoran 'Staches</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+SORT_9&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> California T-Breds</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+SORT_10&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Chicago Hammer</a> </li>
+            </ul>
+</li>
+        </ul>
+      </li>
+      <li> <a href="http://baseball1.onroto.com/baseball/webtest/mini_site_map.pl?disrupt+5+league_last_night's_boxes&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Last Night's Boxes </a>
+        <ul>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_box.pl?disrupt+5+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> My Team </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_box.pl?disrupt+5+tot&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> All Teams </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_box.pl?disrupt+5+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Team by Team </a>
+            <ul>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_box.pl?disrupt+5+0&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Don Wily Quixotes</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_box.pl?disrupt+5+1&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Gormanic Depressives</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_box.pl?disrupt+5+2&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Coney Island</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_box.pl?disrupt+5+3&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Tokilla Mockers</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_box.pl?disrupt+5+4&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Zarr of Los Alamitos</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_box.pl?disrupt+5+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Hummel Dingers</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_box.pl?disrupt+5+6&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> 2 Years & Counting</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_box.pl?disrupt+5+7&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> The G-Spots</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_box.pl?disrupt+5+8&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Sonoran 'Staches</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_box.pl?disrupt+5+9&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> California T-Breds</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_box.pl?disrupt+5+10&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Chicago Hammer</a> </li>
+            </ul>
+</li>
+        </ul>
+      </li>
+      <li> <a href="http://baseball1.onroto.com/baseball/webtest/mini_site_map.pl?disrupt+5+league_live_scoring&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Live Scoring </a>
+        <ul>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_live_scoring.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem" target=_blank> My Team </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_live_scoring.pl?disrupt+5+all&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem" target=_blank> All Team Summary </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_live_scoring.pl?disrupt+5+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Team by Team </a>
+            <ul>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_live_scoring.pl?disrupt+5+0&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Don Wily Quixotes</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_live_scoring.pl?disrupt+5+1&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Gormanic Depressives</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_live_scoring.pl?disrupt+5+2&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Coney Island</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_live_scoring.pl?disrupt+5+3&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Tokilla Mockers</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_live_scoring.pl?disrupt+5+4&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Zarr of Los Alamitos</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_live_scoring.pl?disrupt+5+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Hummel Dingers</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_live_scoring.pl?disrupt+5+6&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> 2 Years & Counting</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_live_scoring.pl?disrupt+5+7&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> The G-Spots</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_live_scoring.pl?disrupt+5+8&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Sonoran 'Staches</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_live_scoring.pl?disrupt+5+9&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> California T-Breds</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_live_scoring.pl?disrupt+5+10&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Chicago Hammer</a> </li>
+            </ul>
+</li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_live_scoring.pl?disrupt+5+stand&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem" target=_blank> Live Standings </a> </li>
+        </ul>
+      </li>
+      <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_MLB_scoreboard.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Live MLB Boxes </a> </li>
+      <li> <a href="http://baseball1.onroto.com/baseball/webtest/mini_site_map.pl?disrupt+5+league_old_live_scoring&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Old Live Scoring </a>
+        <ul>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/livebox.cgi?disrupt+5" target=_blank> My Team </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/livebox.cgi?disrupt+all" target=_blank> All Team Summary </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/livebox.cgi?disrupt+stand" target=_blank> Live Standings </a> </li>
+        </ul>
+      </li>
+      <li> <a href="http://baseball1.onroto.com/baseball/webtest/mini_site_map.pl?disrupt+5+league_team_rosters&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Team Rosters </a>
+        <ul>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_roster.pl?disrupt+5+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> My Team </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_roster.pl?disrupt+5+all+today&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> All Teams </a>
+            <ul>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_roster.pl?disrupt+5+all+today&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Current </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_roster.pl?disrupt+5+all&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Upcoming </a> </li>
+            </ul>
+          </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_short_roster.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> On Single Page </a>
+            <ul>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_short_roster.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> All Players </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_short_roster.pl?disrupt+5+actives_only&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Actives Only </a> </li>
+            </ul>
+          </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_print_ros.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Printable Rosters </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_roster.pl?disrupt+5+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Team by Team </a>
+            <ul>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_roster.pl?disrupt+5+0&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Don Wily Quixotes</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_roster.pl?disrupt+5+1&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Gormanic Depressives</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_roster.pl?disrupt+5+2&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Coney Island</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_roster.pl?disrupt+5+3&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Tokilla Mockers</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_roster.pl?disrupt+5+4&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Zarr of Los Alamitos</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_roster.pl?disrupt+5+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Hummel Dingers</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_roster.pl?disrupt+5+6&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> 2 Years & Counting</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_roster.pl?disrupt+5+7&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> The G-Spots</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_roster.pl?disrupt+5+8&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Sonoran 'Staches</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_roster.pl?disrupt+5+9&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> California T-Breds</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_roster.pl?disrupt+5+10&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Chicago Hammer</a> </li>
+            </ul>
+</li>
+        </ul>
+      </li>
+      <li> <a href="http://baseball1.onroto.com/baseball/webtest/mini_site_map.pl?disrupt+5+league_available_players&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Available Players </a>
+        <ul>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_new_multi_stats.pl?disrupt+5+freeagent+hitters&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Free Agent Hitters </a>
+            <ul>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_new_multi_stats.pl?disrupt+5+freeagent+hitters&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Sortable </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_multi_stats.pl?disrupt+5+freeagent+hitters+no_weekly&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> YTD Stats Only </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_multi_stats.pl?disrupt+5+freeagent+hitters+no_weekly+OLD&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> 2014 YTD Stats </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_multi_stats.pl?disrupt+5+freeagent+hitters+sortable+OLD&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Sortable 2014 Stats </a> </li>
+            </ul>
+          </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_new_multi_stats.pl?disrupt+5+freeagent+pitchers&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Free Agent Pitchers </a>
+            <ul>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_new_multi_stats.pl?disrupt+5+freeagent+pitchers&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Sortable </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_multi_stats.pl?disrupt+5+freeagent+pitchers+no_weekly&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> YTD Stats Only </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_multi_stats.pl?disrupt+5+freeagent+pitchers+no_weekly+OLD&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> 2014 YTD Stats </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_multi_stats.pl?disrupt+5+freeagent+pitchers+sortable+OLD&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Sortable 2014 Stats </a> </li>
+            </ul>
+          </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_new_multi_stats.pl?disrupt+5+waiver+hitters&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Waiver Wire Hitters </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_new_multi_stats.pl?disrupt+5+waiver+pitchers&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Waiver Wire Pitchers </a> </li>
+        </ul>
+      </li>
+      <li> <a href="http://baseball1.onroto.com/baseball/webtest/mini_site_map.pl?disrupt+5+league_mlb_player_data&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> MLB Player Data </a>
+        <ul>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_new_multi_stats.pl?disrupt+5+stats+hitters&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Hitter Stats </a>
+            <ul>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_new_multi_stats.pl?disrupt+5+stats+hitters&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Sortable Hitters </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_multi_stats.pl?disrupt+5+stats+hitters+no_weekly&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Printable Hitters </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_multi_stats.pl?disrupt+5+leaders+hitters+no_weekly+OLD&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> 2014 YTD Stats </a> </li>
+            </ul>
+          </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_new_multi_stats.pl?disrupt+5+stats+pitchers&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Pitcher Stats </a>
+            <ul>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_new_multi_stats.pl?disrupt+5+stats+pitchers&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Sortable Pitchers </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_multi_stats.pl?disrupt+5+stats+pitchers+no_weekly&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Printable Pitchers </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_multi_stats.pl?disrupt+5+leaders+pitchers+no_weekly+OLD&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> 2014 YTD Stats </a> </li>
+            </ul>
+          </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_elig_pos.pl?disrupt+5+all&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Position Eligibility </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_mlb_trans.pl?disrupt+5+new&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> MLB Transactions </a>
+            <ul>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_mlb_trans.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> YTD </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_mlb_trans.pl?disrupt+5+new&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Yesterday </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_mlb_trans.pl?disrupt+5+7&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Last 7 days </a> </li>
+            </ul>
+          </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_mlb_rosters.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> MLB Rosters </a>
+            <ul>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_mlb_rosters.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> All MLB Rosters </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_mlb_rosters.pl?disrupt+5+MLB40&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> All MLB 40 Man Rosters </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_mlb_rosters.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> League Pool MLB Rosters </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_mlb_rosters.pl?disrupt+5+40&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> League Pool 40 Man Rosters </a> </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li> <a href="http://baseball1.onroto.com/baseball/webtest/mini_site_map.pl?disrupt+5+league_transaction_logs&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Transaction Logs </a>
+        <ul>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/no_rosters.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> View Bid-Meister Results </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/no_rosters.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> View Bid-Meister Bids </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_trans.pl?disrupt+5+5+YTD&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> YTD, My Team </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_trans.pl?disrupt+5+all+week&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Current Period, All Teams </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_trans.pl?disrupt+5+5+YTD&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> YTD, Team by Team  </a>
+            <ul>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_trans.pl?disrupt+5+0+YTD&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Don Wily Quixotes</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_trans.pl?disrupt+5+1+YTD&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Gormanic Depressives</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_trans.pl?disrupt+5+2+YTD&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Coney Island</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_trans.pl?disrupt+5+3+YTD&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Tokilla Mockers</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_trans.pl?disrupt+5+4+YTD&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Zarr of Los Alamitos</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_trans.pl?disrupt+5+5+YTD&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Hummel Dingers</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_trans.pl?disrupt+5+6+YTD&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> 2 Years & Counting</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_trans.pl?disrupt+5+7+YTD&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> The G-Spots</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_trans.pl?disrupt+5+8+YTD&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Sonoran 'Staches</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_trans.pl?disrupt+5+9+YTD&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> California T-Breds</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_trans.pl?disrupt+5+10+YTD&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Chicago Hammer</a> </li>
+            </ul>
+</li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_trans.pl?disrupt+5+all+YTD&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> YTD, All Teams </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_trans.pl?disrupt+5+all+by_week&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> All Teams, by Period </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/team_FAAB_trade_log.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> FAAB Trade Log </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_FA_acquisitions.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Free Agent Acquisitions </a> </li>
+        </ul>
+      </li>
+      <li> <a href="http://baseball1.onroto.com/baseball/webtest/mini_site_map.pl?disrupt+5+league_print_reports&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Print Reports </a>
+        <ul>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/unavailable.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> PDF Print Report </a> </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<div class='stats_darker_grey'>
+&nbsp;<br>
+</div>
+
+<ul>
+  <li> <h2> Team Pages </h2>
+    <ul>
+      <li> <a href="http://baseball1.onroto.com/baseball/webtest/mini_site_map.pl?disrupt+5+team_make_transactions&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Make Transactions </a>
+        <ul>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/no_rosters.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Change Line-up </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/no_rosters.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Place Bid-Meister Bids </a> </li>
+        </ul>
+      </li>
+      <li> <a href="http://baseball1.onroto.com/baseball/webtest/team_mock_signup.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Join Mock Draft </a> </li>
+      <li> <a href="http://baseball1.onroto.com/baseball/webtest/mini_site_map.pl?disrupt+5+team_probable_pitchers&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Probable Pitchers </a>
+        <ul>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_propit.pl?disrupt+5+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> My Team </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_propit.pl?disrupt+5+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Team by Team </a>
+            <ul>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_propit.pl?disrupt+5+0&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Don Wily Quixotes</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_propit.pl?disrupt+5+1&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Gormanic Depressives</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_propit.pl?disrupt+5+2&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Coney Island</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_propit.pl?disrupt+5+3&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Tokilla Mockers</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_propit.pl?disrupt+5+4&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Zarr of Los Alamitos</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_propit.pl?disrupt+5+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Hummel Dingers</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_propit.pl?disrupt+5+6&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> 2 Years & Counting</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_propit.pl?disrupt+5+7&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> The G-Spots</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_propit.pl?disrupt+5+8&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Sonoran 'Staches</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_propit.pl?disrupt+5+9&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> California T-Breds</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_propit.pl?disrupt+5+10&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Chicago Hammer</a> </li>
+            </ul>
+</li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_propit.pl?disrupt+5+FA&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> All Free Agents </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_propit.pl?disrupt+5+LEAGUE&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> All League Pool </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_propit.pl?disrupt+5+MLB&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> All MLB Teams </a> </li>
+        </ul>
+      </li>
+      <li> <a href="http://baseball1.onroto.com/baseball/webtest/mini_site_map.pl?disrupt+5+team_player_matchups&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Player Matchups </a>
+        <ul>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_matchups.pl?disrupt+5+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> My Team </a>
+            <ul>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_matchups.pl?disrupt+5+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Today's Line-up </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_matchups.pl?disrupt+5+5+future&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Upcoming Line-up </a> </li>
+            </ul>
+          </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_matchups.pl?disrupt+5+all&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> All Teams </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_matchups.pl?disrupt+5+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Team by Team </a>
+            <ul>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_matchups.pl?disrupt+5+0&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Don Wily Quixotes</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_matchups.pl?disrupt+5+1&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Gormanic Depressives</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_matchups.pl?disrupt+5+2&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Coney Island</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_matchups.pl?disrupt+5+3&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Tokilla Mockers</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_matchups.pl?disrupt+5+4&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Zarr of Los Alamitos</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_matchups.pl?disrupt+5+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Hummel Dingers</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_matchups.pl?disrupt+5+6&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> 2 Years & Counting</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_matchups.pl?disrupt+5+7&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> The G-Spots</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_matchups.pl?disrupt+5+8&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Sonoran 'Staches</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_matchups.pl?disrupt+5+9&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> California T-Breds</a> </li>
+              <li><a href="http://baseball1.onroto.com/baseball/webtest/display_matchups.pl?disrupt+5+10&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Chicago Hammer</a> </li>
+            </ul>
+</li>
+        </ul>
+      </li>
+      <li> <a href="http://baseball1.onroto.com/baseball/webtest/mini_site_map.pl?disrupt+5+team_player_notes&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Player Notes </a>
+        <ul>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_notes.pl?disrupt+5+5+-7&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> My Team </a>
+            <ul>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_notes.pl?disrupt+5+5+-7&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Past 7 Days </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_notes.pl?disrupt+5+5+-14&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Past 2 Weeks </a> </li>
+            </ul>
+          </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_notes.pl?disrupt+5+FA+-7&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> All Free Agents </a>
+            <ul>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_notes.pl?disrupt+5+FA+-7&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Past 7 Days </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_notes.pl?disrupt+5+FA+-14&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Past 2 Weeks </a> </li>
+            </ul>
+          </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_notes.pl?disrupt+5+LEAGUE+-1&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> All League Players </a>
+            <ul>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_notes.pl?disrupt+5+LEAGUE+-1&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Past 24 Hours </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_notes.pl?disrupt+5+LEAGUE+-7&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Past 7 Days </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_notes.pl?disrupt+5+LEAGUE+-14&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Past 2 Weeks </a> </li>
+            </ul>
+          </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_notes.pl?disrupt+5+MLB+-1&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> All MLB Players </a>
+            <ul>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_notes.pl?disrupt+5+MLB+-1&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Past 24 Hours </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_notes.pl?disrupt+5+MLB+-7&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Last 7 Days </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/display_notes.pl?disrupt+5+MLB+-14&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Last 2 Weeks </a> </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li> <a href="http://baseball1.onroto.com/baseball/webtest/mini_site_map.pl?disrupt+5+team_messages_and_email&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Messages/Email/Polls/Chat </a>
+        <ul>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/team_inbox.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Private Message Center </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/team_message_board.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> League Message Board </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/send_message_form.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Post A Message </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/team_email_owners.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Email Owners </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/team_poll_display.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> League Polls </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/chat_room.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Chat Room </a> </li>
+        </ul>
+      </li>
+      <li> <a href="http://baseball1.onroto.com/baseball/webtest/mini_site_map.pl?disrupt+5+team_toy_box&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Toy Box </a>
+        <ul>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/no_rosters.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Generate Old Stat Reports </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/team_proj_stand.pl?disrupt+5+HQproj&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Projected Standings </a>
+            <ul>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/team_proj_stand.pl?disrupt+5+proj&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Davenport Proj Standings </a> </li>
+              <li> <a href="http://baseball1.onroto.com/baseball/webtest/team_proj_stand.pl?disrupt+5+HQproj&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Baseball HQ Standings </a> </li>
+            </ul>
+          </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/trade_evaluator_teams.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Trade Evaluator </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/no_rosters.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Draft Rosters Standings </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/team_get_hitter_rankings.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Projected Hitter Rankings </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/team_get_pitcher_rankings.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Projected Pitcher Rankings </a> </li>
+        </ul>
+      </li>
+      <li> <a href="http://baseball1.onroto.com/baseball/webtest/mini_site_map.pl?disrupt+5+team_trades&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Trades </a>
+        <ul>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/team_trade_center.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Trade Center </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/team_propose_trade.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Propose New Trade </a> </li>
+          <li> <a href="http://baseball1.onroto.com/baseball/webtest/team_trading_block.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> On The Block </a> </li>
+        </ul>
+      </li>
+      <li> <a href="http://baseball1.onroto.com/baseball/webtest/team_get_team_specs.pl?disrupt+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem"> Team Set-up Options </a> </li>
+  </ul>
+</li>
+</ul>
+<div class='stats_darker_grey'>
+&nbsp;<br>
+</div>
+
+</div>
+ </td>
+ <td rowspan=2 valign=top align=center width=840>
+<div align=left> <font color="#990000">
+This league is in pre-draft mode, with draft scheduled for 04.04.
+If this draft date is wrong, it can be updated on the "basic specs" set-up page.
+</font></div>
+
+<!--Standings Begin--><p><center>&nbsp;<br><font color="#484848" size="3">
+<b> STANDINGS
+through 04.04.15<br>&nbsp;</b></font>
+(Stats are from 2014 applied to 2015 rosters and will reset after 04.05)</p>
+<table width='' cellpadding =2 cellspacing=2 border=0 bgcolor=FFFFFF> <tr><th class='white_on_grey'> Team Name </th>
+<th class='white_on_grey'>   HR </th>
+<th class='white_on_grey'>  OBP </th>
+<th class='white_on_grey'>  NSB </th>
+<th class='white_on_grey'>   RP </th>
+<th class='white_on_grey'>  ERA </th>
+<th class='white_on_grey'> K-BB </th>
+<th class='white_on_grey'> NETSH </th>
+<th class='white_on_grey'>  WQS </th>
+<th class='white_on_grey'> TOTAL</th> <th class='white_on_grey'> +/- </th>
+</tr>
+<tr><td align = left nowrap class='stats_light_grey'><a class=team_link rel=0 href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+0&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem">Don Wily Quixotes</a></td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'><b> 48.0</b></td>
+<td align = right class='stats_light_grey'> 48.0</td>
+</tr><tr><td align = left nowrap class='stats_dark_grey'><a class=team_link rel=1 href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+1&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem">Gormanic Depressives</a></td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'><b> 48.0</b></td>
+<td align = right class='stats_dark_grey'> 48.0</td>
+</tr><tr><td align = left nowrap class='stats_light_grey'><a class=team_link rel=2 href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+2&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem">Coney Island</a></td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'><b> 48.0</b></td>
+<td align = right class='stats_light_grey'> 48.0</td>
+</tr><tr><td align = left nowrap class='stats_dark_grey'><a class=team_link rel=3 href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+3&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem">Tokilla Mockers</a></td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'><b> 48.0</b></td>
+<td align = right class='stats_dark_grey'> 48.0</td>
+</tr><tr><td align = left nowrap class='stats_light_grey'><a class=team_link rel=4 href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+4&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem">Zarr of Los Alamitos</a></td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'><b> 48.0</b></td>
+<td align = right class='stats_light_grey'> 48.0</td>
+</tr><tr><td align = left nowrap class='stats_light_blue'><a class=team_link rel=5 href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem">Hummel Dingers</a></td>
+<td align = right class='stats_light_blue'> 6.0</td>
+<td align = right class='stats_light_blue'> 6.0</td>
+<td align = right class='stats_light_blue'> 6.0</td>
+<td align = right class='stats_light_blue'> 6.0</td>
+<td align = right class='stats_light_blue'> 6.0</td>
+<td align = right class='stats_light_blue'> 6.0</td>
+<td align = right class='stats_light_blue'> 6.0</td>
+<td align = right class='stats_light_blue'> 6.0</td>
+<td align = right class='stats_light_blue'><b> 48.0</b></td>
+<td align = right class='stats_light_blue'> 48.0</td>
+</tr><tr><td align = left nowrap class='stats_light_grey'><a class=team_link rel=6 href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+6&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem">2 Years & Counting</a></td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'><b> 48.0</b></td>
+<td align = right class='stats_light_grey'> 48.0</td>
+</tr><tr><td align = left nowrap class='stats_dark_grey'><a class=team_link rel=7 href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+7&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem">The G-Spots</a></td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'><b> 48.0</b></td>
+<td align = right class='stats_dark_grey'> 48.0</td>
+</tr><tr><td align = left nowrap class='stats_light_grey'><a class=team_link rel=8 href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+8&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem">Sonoran 'Staches</a></td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'><b> 48.0</b></td>
+<td align = right class='stats_light_grey'> 48.0</td>
+</tr><tr><td align = left nowrap class='stats_dark_grey'><a class=team_link rel=9 href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+9&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem">California T-Breds</a></td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'> 6.0</td>
+<td align = right class='stats_dark_grey'><b> 48.0</b></td>
+<td align = right class='stats_dark_grey'> 48.0</td>
+</tr><tr><td align = left nowrap class='stats_light_grey'><a class=team_link rel=10 href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+10&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem">Chicago Hammer</a></td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'> 6.0</td>
+<td align = right class='stats_light_grey'><b> 48.0</b></td>
+<td align = right class='stats_light_grey'> 48.0</td>
+</tr></table><br>
+<p><font color="#484848" size="3"> <b>STANDINGS FOR CURRENT WEEK </b></font>
+<table width='' cellpadding =2 cellspacing=2 bgcolor=FFFFFF border=0>
+<tr><th class='white_on_grey'>Team</th>
+<th class='white_on_grey'>  HR</th>
+<th class='white_on_grey'> OBP</th>
+<th class='white_on_grey'> NSB</th>
+<th class='white_on_grey'>  RP</th>
+<th class='white_on_grey'> ERA</th>
+<th class='white_on_grey'>K-BB</th>
+<th class='white_on_grey'>NETSH</th>
+<th class='white_on_grey'> WQS</th>
+<th class='white_on_grey'>TOTAL</th></tr>
+<tr><td class='stats_light_grey' nowrap align=left><a class=team_link rel=0 href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+0&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem">Don Wily Quixotes</a></td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>48.0</td></tr>
+<tr><td class='stats_dark_grey' nowrap align=left><a class=team_link rel=1 href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+1&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem">Gormanic Depressives</a></td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>48.0</td></tr>
+<tr><td class='stats_light_grey' nowrap align=left><a class=team_link rel=2 href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+2&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem">Coney Island</a></td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>48.0</td></tr>
+<tr><td class='stats_dark_grey' nowrap align=left><a class=team_link rel=3 href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+3&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem">Tokilla Mockers</a></td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>48.0</td></tr>
+<tr><td class='stats_light_grey' nowrap align=left><a class=team_link rel=4 href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+4&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem">Zarr of Los Alamitos</a></td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>48.0</td></tr>
+<tr><td class='stats_light_blue' nowrap align=left><a class=team_link rel=5 href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+5&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem">Hummel Dingers</a></td>
+<td class='stats_light_blue' align=right>6.0</td>
+<td class='stats_light_blue' align=right>6.0</td>
+<td class='stats_light_blue' align=right>6.0</td>
+<td class='stats_light_blue' align=right>6.0</td>
+<td class='stats_light_blue' align=right>6.0</td>
+<td class='stats_light_blue' align=right>6.0</td>
+<td class='stats_light_blue' align=right>6.0</td>
+<td class='stats_light_blue' align=right>6.0</td>
+<td class='stats_light_blue' align=right>48.0</td></tr>
+<tr><td class='stats_light_grey' nowrap align=left><a class=team_link rel=6 href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+6&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem">2 Years & Counting</a></td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>48.0</td></tr>
+<tr><td class='stats_dark_grey' nowrap align=left><a class=team_link rel=7 href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+7&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem">The G-Spots</a></td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>48.0</td></tr>
+<tr><td class='stats_light_grey' nowrap align=left><a class=team_link rel=8 href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+8&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem">Sonoran 'Staches</a></td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>48.0</td></tr>
+<tr><td class='stats_dark_grey' nowrap align=left><a class=team_link rel=9 href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+9&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem">California T-Breds</a></td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>6.0</td>
+<td class='stats_dark_grey' align=right>48.0</td></tr>
+<tr><td class='stats_light_grey' nowrap align=left><a class=team_link rel=10 href="http://baseball1.onroto.com/baseball/webtest/display_team_stats.pl?disrupt+5+10&session_id=QmfEGBOd26mYmlVRGkXxDZjaOyBem">Chicago Hammer</a></td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>6.0</td>
+<td class='stats_light_grey' align=right>48.0</td></tr>
+</table>
+<p><font color="#484848" size="3"> <b>  STANDINGS BY CATEGORY </b>
+        </font>
+<table width='' cellpadding =2 cellspacing=2 border=0 bgcolor=FFFFFF>
+<tr> <td><table width='100%' cellspacing=2 border = 0 bgcolor=FFFFFF><tr><th align = center colspan = "5" class='white_on_grey'>HOME RUNS</th></tr>
+<tr> <th class='white_on_grey'> Team </th> <th class='white_on_grey'> Year </th> <th class='white_on_grey'>  Wk </th> <th class='white_on_grey'> PTS
+              </th> <th class='white_on_grey'> +/- </th> </tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Don Wily Quixotes</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>Gormanic Depressives</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Coney Island</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>Tokilla Mockers</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Zarr of Los Alamitos</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_blue'>Hummel Dingers</td>
+<td align = right class='stats_light_blue'>0</td>
+<td align = right class='stats_light_blue'>0</td>
+<td align = right class='stats_light_blue'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_blue'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>2 Years & Counting</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>The G-Spots</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Sonoran 'Staches</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>California T-Breds</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Chicago Hammer</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+</table>
+</td><td>
+<table width='100%' cellspacing=2 border = 0 bgcolor=FFFFFF><tr><th align = center colspan = "5" class='white_on_grey'>ON BASE PCT</th></tr>
+<tr> <th class='white_on_grey'> Team </th> <th class='white_on_grey'> Year </th> <th class='white_on_grey'>  Wk </th> <th class='white_on_grey'> PTS
+              </th> <th class='white_on_grey'> +/- </th> </tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Don Wily Quixotes</td>
+<td align = right class='stats_light_grey'>.0000</td>
+<td align = right class='stats_light_grey'>.0000</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>Gormanic Depressives</td>
+<td align = right class='stats_dark_grey'>.0000</td>
+<td align = right class='stats_dark_grey'>.0000</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Coney Island</td>
+<td align = right class='stats_light_grey'>.0000</td>
+<td align = right class='stats_light_grey'>.0000</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>Tokilla Mockers</td>
+<td align = right class='stats_dark_grey'>.0000</td>
+<td align = right class='stats_dark_grey'>.0000</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Zarr of Los Alamitos</td>
+<td align = right class='stats_light_grey'>.0000</td>
+<td align = right class='stats_light_grey'>.0000</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_blue'>Hummel Dingers</td>
+<td align = right class='stats_light_blue'>.0000</td>
+<td align = right class='stats_light_blue'>.0000</td>
+<td align = right class='stats_light_blue'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_blue'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>2 Years & Counting</td>
+<td align = right class='stats_light_grey'>.0000</td>
+<td align = right class='stats_light_grey'>.0000</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>The G-Spots</td>
+<td align = right class='stats_dark_grey'>.0000</td>
+<td align = right class='stats_dark_grey'>.0000</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Sonoran 'Staches</td>
+<td align = right class='stats_light_grey'>.0000</td>
+<td align = right class='stats_light_grey'>.0000</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>California T-Breds</td>
+<td align = right class='stats_dark_grey'>.0000</td>
+<td align = right class='stats_dark_grey'>.0000</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Chicago Hammer</td>
+<td align = right class='stats_light_grey'>.0000</td>
+<td align = right class='stats_light_grey'>.0000</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+</table>
+</td> </tr>
+<tr> <td><table width='100%' cellspacing=2 border = 0 bgcolor=FFFFFF><tr><th align = center colspan = "5" class='white_on_grey'>NET STEALS</th></tr>
+<tr> <th class='white_on_grey'> Team </th> <th class='white_on_grey'> Year </th> <th class='white_on_grey'>  Wk </th> <th class='white_on_grey'> PTS
+              </th> <th class='white_on_grey'> +/- </th> </tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Don Wily Quixotes</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>Gormanic Depressives</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Coney Island</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>Tokilla Mockers</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Zarr of Los Alamitos</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_blue'>Hummel Dingers</td>
+<td align = right class='stats_light_blue'>0</td>
+<td align = right class='stats_light_blue'>0</td>
+<td align = right class='stats_light_blue'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_blue'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>2 Years & Counting</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>The G-Spots</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Sonoran 'Staches</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>California T-Breds</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Chicago Hammer</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+</table>
+</td><td>
+<table width='100%' cellspacing=2 border = 0 bgcolor=FFFFFF><tr><th align = center colspan = "5" class='white_on_grey'>RBI + RUNS - HR</th></tr>
+<tr> <th class='white_on_grey'> Team </th> <th class='white_on_grey'> Year </th> <th class='white_on_grey'>  Wk </th> <th class='white_on_grey'> PTS
+              </th> <th class='white_on_grey'> +/- </th> </tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Don Wily Quixotes</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>Gormanic Depressives</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Coney Island</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>Tokilla Mockers</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Zarr of Los Alamitos</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_blue'>Hummel Dingers</td>
+<td align = right class='stats_light_blue'>0</td>
+<td align = right class='stats_light_blue'>0</td>
+<td align = right class='stats_light_blue'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_blue'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>2 Years & Counting</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>The G-Spots</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Sonoran 'Staches</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>California T-Breds</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Chicago Hammer</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+</table>
+</td> </tr>
+<tr> <td><table width='100%' cellspacing=2 border = 0 bgcolor=FFFFFF><tr><th align = center colspan = "5" class='white_on_grey'>ERA</th></tr>
+<tr> <th class='white_on_grey'> Team </th> <th class='white_on_grey'> Year </th> <th class='white_on_grey'>  Wk </th> <th class='white_on_grey'> PTS
+              </th> <th class='white_on_grey'> +/- </th> </tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Don Wily Quixotes</td>
+<td align = right class='stats_light_grey'>0.00</td>
+<td align = right class='stats_light_grey'>0.00</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>Gormanic Depressives</td>
+<td align = right class='stats_dark_grey'>0.00</td>
+<td align = right class='stats_dark_grey'>0.00</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Coney Island</td>
+<td align = right class='stats_light_grey'>0.00</td>
+<td align = right class='stats_light_grey'>0.00</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>Tokilla Mockers</td>
+<td align = right class='stats_dark_grey'>0.00</td>
+<td align = right class='stats_dark_grey'>0.00</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Zarr of Los Alamitos</td>
+<td align = right class='stats_light_grey'>0.00</td>
+<td align = right class='stats_light_grey'>0.00</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_blue'>Hummel Dingers</td>
+<td align = right class='stats_light_blue'>0.00</td>
+<td align = right class='stats_light_blue'>0.00</td>
+<td align = right class='stats_light_blue'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_blue'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>2 Years & Counting</td>
+<td align = right class='stats_light_grey'>0.00</td>
+<td align = right class='stats_light_grey'>0.00</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>The G-Spots</td>
+<td align = right class='stats_dark_grey'>0.00</td>
+<td align = right class='stats_dark_grey'>0.00</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Sonoran 'Staches</td>
+<td align = right class='stats_light_grey'>0.00</td>
+<td align = right class='stats_light_grey'>0.00</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>California T-Breds</td>
+<td align = right class='stats_dark_grey'>0.00</td>
+<td align = right class='stats_dark_grey'>0.00</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Chicago Hammer</td>
+<td align = right class='stats_light_grey'>0.00</td>
+<td align = right class='stats_light_grey'>0.00</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+</table>
+</td><td>
+<table width='100%' cellspacing=2 border = 0 bgcolor=FFFFFF><tr><th align = center colspan = "5" class='white_on_grey'>SO - BB</th></tr>
+<tr> <th class='white_on_grey'> Team </th> <th class='white_on_grey'> Year </th> <th class='white_on_grey'>  Wk </th> <th class='white_on_grey'> PTS
+              </th> <th class='white_on_grey'> +/- </th> </tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Don Wily Quixotes</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>Gormanic Depressives</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Coney Island</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>Tokilla Mockers</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Zarr of Los Alamitos</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_blue'>Hummel Dingers</td>
+<td align = right class='stats_light_blue'>0</td>
+<td align = right class='stats_light_blue'>0</td>
+<td align = right class='stats_light_blue'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_blue'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>2 Years & Counting</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>The G-Spots</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Sonoran 'Staches</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>California T-Breds</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Chicago Hammer</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+</table>
+</td> </tr>
+<tr> <td><table width='100%' cellspacing=2 border = 0 bgcolor=FFFFFF><tr><th align = center colspan = "5" class='white_on_grey'>SV + HO - BS</th></tr>
+<tr> <th class='white_on_grey'> Team </th> <th class='white_on_grey'> Year </th> <th class='white_on_grey'>  Wk </th> <th class='white_on_grey'> PTS
+              </th> <th class='white_on_grey'> +/- </th> </tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Don Wily Quixotes</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>Gormanic Depressives</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Coney Island</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>Tokilla Mockers</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Zarr of Los Alamitos</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_blue'>Hummel Dingers</td>
+<td align = right class='stats_light_blue'>0</td>
+<td align = right class='stats_light_blue'>0</td>
+<td align = right class='stats_light_blue'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_blue'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>2 Years & Counting</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>The G-Spots</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Sonoran 'Staches</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>California T-Breds</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Chicago Hammer</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+</table>
+</td><td>
+<table width='100%' cellspacing=2 border = 0 bgcolor=FFFFFF><tr><th align = center colspan = "5" class='white_on_grey'>WINS + QUALITY STARTS</th></tr>
+<tr> <th class='white_on_grey'> Team </th> <th class='white_on_grey'> Year </th> <th class='white_on_grey'>  Wk </th> <th class='white_on_grey'> PTS
+              </th> <th class='white_on_grey'> +/- </th> </tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Don Wily Quixotes</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>Gormanic Depressives</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Coney Island</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>Tokilla Mockers</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Zarr of Los Alamitos</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_blue'>Hummel Dingers</td>
+<td align = right class='stats_light_blue'>0</td>
+<td align = right class='stats_light_blue'>0</td>
+<td align = right class='stats_light_blue'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_blue'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>2 Years & Counting</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>The G-Spots</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Sonoran 'Staches</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_dark_grey'>California T-Breds</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'>0</td>
+<td align = right class='stats_dark_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_dark_grey'>6.0</td></tr>
+<tr> <td align = left nowrap class='stats_light_grey'>Chicago Hammer</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'>0</td>
+<td align = right class='stats_light_grey'><b>6.0</b></td>
+<td nowrap align = right class='stats_light_grey'>6.0</td></tr>
+</table>
+</td> </tr>
+</table></center><!--Standings End--></td></tr><tr><td class='nav_header_bg' bgcolor="#cccccc" valign=top align=center width=180></td></tr></table>
