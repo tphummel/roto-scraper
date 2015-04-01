@@ -53,7 +53,7 @@ function getSeasonStandings(dom){
       dom(this)
         .children('td')
         .each(function(j){
-          team[keys[j]] = dom(this).text()
+          team[keys[j]] = dom(this).text().trim()
         })
 
       standings.push(team)
@@ -88,7 +88,7 @@ function getWeekStandings(dom){
       dom(this)
         .children('td')
         .each(function(j){
-          team[keys[j]] = dom(this).text()
+          team[keys[j]] = dom(this).text().trim()
         })
 
       standings.push(team)
@@ -113,6 +113,7 @@ function getCategoryStandings(dom){
         .children('tr')
         .slice(0,1)
         .text()
+        .trim()
 
       var keys = []
       dom(this)
