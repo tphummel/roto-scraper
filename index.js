@@ -67,7 +67,37 @@ function getSeasonStandings(dom){
 
 function getWeekStandings(dom){
   var tables = dom("table [cellpadding='2']")
-  var weeklyTable = tables[1]
+  var weekTable = tables[1]
+
+  var rows = dom(weekTable).children('tr')
+
+  var keys = []
+  dom(rows)
+    .first()
+    .children('th')
+    .each(function(i){
+      keys.push(dom(this).text().trim())
+    })
+
+  var standings = []
+  dom(rows)
+    .slice(1)
+    .each(function(i){
+
+      var team = {
+        order: i
+      }
+
+      dom(this)
+        .children('td')
+        .each(function(j){
+          team[keys[j]] = dom(this).text()
+        })
+
+      standings.push(team)
+    })
+
+  return standings
 }
 
 function getCategoryStandings(dom){
@@ -79,12 +109,13 @@ function scrapeStandings(text, cb){
   var dom = cheerio.load(text)
 
   standingsDate = getStandingsDate(dom)
-
   seasonStandings = getSeasonStandings(dom)
+  weekStandings = getWeekStandings(dom)
 
   var result = {
     standingsDate: standingsDate,
-    seasonStandings: seasonStandings
+    seasonStandings: seasonStandings,
+    weekStandings: weekStandings
   }
 
   return cb(null, result)

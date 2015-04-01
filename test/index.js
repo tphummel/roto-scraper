@@ -12,6 +12,7 @@ test('scrape test file', function(t){
       t.equal(err, null)
       t.equal(result.standingsDate, '2015-04-04')
       t.equal(result.seasonStandings.length, 11)
+      t.equal(result.weekStandings.length, 11)
       t.end()
     })
   })
