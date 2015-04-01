@@ -4,37 +4,16 @@
   "description": "scraping rotisserie stats",
   "main": "index.js",
   "dependencies": {
-    "coffee-script": "~1.6.2",
-    "request": "~2.21.0",
-    "underscore": "~1.4.4",
-    "jquery": "~1.8.3",
-    "moment": "~2.0.0",
-    "async": "~0.2.8",
-    "through": "~2.3.4",
-    "JSONStream": "~0.6.4",
-    "express": "~3.2.4",
-    "connect-health-check": "~0.2.0",
-    "browserify": "~2.33.0",
-    "jade": "~0.35.0",
-    "mongo-collection": "~0.1.1",
-    "coffeeify": "~0.5.1",
-    "newrelic": "~1.0.0"
-  },
-  "devDependencies": {
-    "mocha": "~1.9.0",
-    "chai": "~1.6.0",
-    "deadreload": "0.0.0",
-    "supervisor": "~0.5.6"
+    "cheerio": "^0.19.0",
+    "moment": "^2.9.0"
   },
   "scripts": {
-    "start": "node index.js",
-    "dev": "./node_modules/.bin/supervisor -n exit -i public -e js,coffee,jade,scss index",
-    "test": "./node_modules/.bin/mocha"
+    "test": "tape test"
   },
   "author": "Tom Hummel",
   "license": "BSD",
   "optionalDependencies": {},
-  "engines": {
-    "node": ">=0.10"
+  "devDependencies": {
+    "tape": "^3.5.0"
   }
 }
