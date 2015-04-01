@@ -1,17 +1,35 @@
 {
-  "name": "roto-scraper",
+  "name": "onroto-standings-scraper",
   "version": "0.3.1",
-  "description": "scraping rotisserie stats",
+  "description": "convert onroto.com standings html to json",
   "main": "index.js",
   "dependencies": {
     "cheerio": "^0.19.0",
     "moment": "^2.9.0"
   },
+  "bugs": "https://github.com/tphummel/onroto-standings-scraper/issues",
+  "keywords": [
+    "baseball",
+    "rotisserie",
+    "fantasy",
+    "standings",
+    "onroto",
+    "scraping",
+    "scraper"
+  ],
   "scripts": {
     "test": "tape test"
   },
-  "author": "Tom Hummel",
-  "license": "BSD",
+  "author": {
+    "name": "Tom Hummel",
+    "email": "tphummel@gmail.com",
+    "url": "http://tomhummel.com"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/tphummel/onroto-standings-scraper.git"
+  },
+  "license": "MIT",
   "optionalDependencies": {},
   "devDependencies": {
     "tape": "^3.5.0"
