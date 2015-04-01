@@ -1,6 +1,6 @@
 {
   "name": "onroto-standings-scraper",
-  "version": "0.3.1",
+  "version": "1.0.0",
   "description": "convert onroto.com standings html to json",
   "main": "index.js",
   "dependencies": {
@@ -25,9 +25,9 @@
     "email": "tphummel@gmail.com",
     "url": "http://tomhummel.com"
   },
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/tphummel/onroto-standings-scraper.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tphummel/onroto-standings-scraper.git"
   },
   "license": "MIT",
   "optionalDependencies": {},
