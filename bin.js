@@ -7,7 +7,7 @@ function onDocument(err, doc) {
   oss(doc, function(err, result){
     if(err) throw new Error(err)
 
-    console.log(JSON.stringify(result.weekStandings))
+    console.log(JSON.stringify(result))
   })
 
 }
