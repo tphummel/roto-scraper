@@ -3,7 +3,7 @@ var moment = require('moment')
 
 module.exports = scrapeStandings
 
-function scrapeStandings(text, cb){
+function scrapeStandings (text, cb) {
   var dom = cheerio.load(text)
 
   return cb(null, {
@@ -14,8 +14,8 @@ function scrapeStandings(text, cb){
   })
 }
 
-function getStandingsDate(dom){
-  var headings = dom('font b').filter(function(i) {
+function getStandingsDate (dom) {
+  var headings = dom('font b').filter(function (i) {
     var inner = dom(this).text()
     return /STANDINGS/.test(inner)
   })
@@ -28,7 +28,7 @@ function getStandingsDate(dom){
   return prettyDate
 }
 
-function getSeasonStandings(dom){
+function getSeasonStandings (dom) {
   var tables = dom("table [cellpadding='2']")
   var seasonTable = tables[0]
   var rows = dom(seasonTable).children('tr')
@@ -37,22 +37,21 @@ function getSeasonStandings(dom){
   dom(rows)
     .first()
     .children('th')
-    .each(function(i){
+    .each(function (i) {
       keys.push(dom(this).text().trim())
     })
 
   var standings = []
   dom(rows)
     .slice(1)
-    .each(function(i){
-
+    .each(function (i) {
       var team = {
         order: i
       }
 
       dom(this)
         .children('td')
-        .each(function(j){
+        .each(function (j) {
           team[keys[j]] = dom(this).text().trim()
         })
 
@@ -62,7 +61,7 @@ function getSeasonStandings(dom){
   return standings
 }
 
-function getWeekStandings(dom){
+function getWeekStandings (dom) {
   var tables = dom("table [cellpadding='2']")
   var weekTable = tables[1]
 
@@ -72,22 +71,21 @@ function getWeekStandings(dom){
   dom(rows)
     .first()
     .children('th')
-    .each(function(i){
+    .each(function (i) {
       keys.push(dom(this).text().trim())
     })
 
   var standings = []
   dom(rows)
     .slice(1)
-    .each(function(i){
-
+    .each(function (i) {
       var team = {
         order: i
       }
 
       dom(this)
         .children('td')
-        .each(function(j){
+        .each(function (j) {
           team[keys[j]] = dom(this).text().trim()
         })
 
@@ -97,7 +95,7 @@ function getWeekStandings(dom){
   return standings
 }
 
-function getCategoryStandings(dom){
+function getCategoryStandings (dom) {
   var tables = dom("table [cellpadding='2']")
   var catParentTable = tables[2]
 
@@ -107,52 +105,51 @@ function getCategoryStandings(dom){
     .children('tr')
     .children('td')
     .children('table')
-    .each(function(i){
-
+    .each(function (i) {
       var category = dom(this)
         .children('tr')
-        .slice(0,1)
+        .slice(0, 1)
         .text()
         .trim()
 
       var keys = []
       dom(this)
         .children('tr')
-        .slice(1,2)
+        .slice(1, 2)
         .children('th')
-        .each(function(j){
+        .each(function (j) {
           keys.push(dom(this).text().trim())
         })
 
       dom(this)
         .children('tr')
         .slice(2)
-        .each(function(k){
-
+        .each(function (k) {
           var teamName = dom(this)
             .children('td')
-            .slice(0,1).text().trim()
+            .slice(0, 1).text().trim()
 
-          if(!teams[teamName]){
+          if (!teams[teamName]) {
             teams[teamName] = {
               team: teamName
             }
           }
 
-          if(!teams[teamName][category])
+          if (!teams[teamName][category]) {
             teams[teamName][category] = {}
+          }
 
           dom(this)
             .children('td')
             .slice(1)
-            .each(function(l){
-              teams[teamName][category][keys[l+1]] = dom(this).text().trim()
+            .each(function (l) {
+              teams[teamName][category][keys[l + 1]] = dom(this).text().trim()
             })
         })
     })
 
   var teamsArr = Object.keys(teams)
-    .map(function(team){
+    .map(function (team) {
       return teams[team]
     })
   return teamsArr

@@ -19,7 +19,7 @@
     "scraper"
   ],
   "scripts": {
-    "test": "tape test"
+    "test": "standard && tape test"
   },
   "author": {
     "name": "Tom Hummel",
@@ -33,6 +33,7 @@
   "license": "MIT",
   "optionalDependencies": {},
   "devDependencies": {
+    "standard": "^3.5.0",
     "tape": "^3.5.0"
   }
 }

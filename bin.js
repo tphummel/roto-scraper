@@ -3,16 +3,18 @@
 var http = require('http')
 var oss = require('./index')
 
-function onDocument(err, doc) {
-  oss(doc, function(err, result){
-    if(err) throw new Error(err)
+function onDocument (err, doc) {
+  if (err) console.error(err)
+
+  oss(doc, function (err, result) {
+    if (err) console.error(err)
 
     console.log(JSON.stringify(result))
   })
 
 }
 
-function onResponse(response) {
+function onResponse (response) {
   var str = ''
 
   response.on('data', function (chunk) {
@@ -31,4 +33,4 @@ var options = {
   path: process.env.ONROTO_PATH
 }
 
-http.request(options, onResponse).end();
+http.request(options, onResponse).end()
