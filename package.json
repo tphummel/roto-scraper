@@ -5,7 +5,7 @@
   "main": "index.js",
   "bin": "bin.js",
   "dependencies": {
-    "cheerio": "^0.19.0",
+    "cheerio": "^0.22.0",
     "moment": "^2.9.0"
   },
   "bugs": "https://github.com/tphummel/onroto-standings-scraper/issues",
@@ -33,7 +33,7 @@
   "license": "MIT",
   "optionalDependencies": {},
   "devDependencies": {
-    "standard": "^3.5.0",
-    "tape": "^3.5.0"
+    "standard": "^10.0.1",
+    "tape": "^4.6.3"
   }
 }
