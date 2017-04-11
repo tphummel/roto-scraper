@@ -1,0 +1,5 @@
+data/
+example/
+test/
+.git/
+node_modules/
