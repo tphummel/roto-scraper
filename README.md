@@ -39,5 +39,7 @@ docker run -it --rm --name onroto-standings-scraper -v "$PWD":/usr/src/app -e ON
 
 ## docker build
 
+```
 docker build .
 docker push quay.io/tomh/onroto-standings-scraper
+```
