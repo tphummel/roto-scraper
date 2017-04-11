@@ -20,3 +20,4 @@ data/**/mongodb/
 *.rdb
 
 public/main.js
+data
