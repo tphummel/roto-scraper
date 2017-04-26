@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var http = require('http')
-var oss = require('./index')
+var oss = require('../')
 
 function onDocument (err, doc) {
   if (err) console.error(err)
