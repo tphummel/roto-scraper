@@ -1,6 +1,6 @@
 {
   "name": "onroto-standings-scraper",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "convert onroto.com standings html to json",
   "main": "index.js",
   "bin": "./bin.js",
