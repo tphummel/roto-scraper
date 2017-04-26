@@ -2,14 +2,14 @@
 
 var fs = require('fs')
 var path = require('path')
-var lib = require('../')
+var lib = require('.')
 
 var inFile = process.argv[2]
 
 if (['help', '--help'].includes(inFile)) {
   console.log(`
 USAGE:
-  node ./bin-fs.js ./my-input-file.html > ./outfile.json
+  node ./bin.js ./my-input-file.html > ./outfile.json
   `)
   process.exit(0)
 }
