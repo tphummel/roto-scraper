@@ -1,19 +1,9 @@
 # onroto standings scraper #
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/tphummel/onroto-standings-scraper.svg)](https://greenkeeper.io/)
-
-[![Build Status](https://travis-ci.org/tphummel/onroto-standings-scraper.png)](https://travis-ci.org/tphummel/onroto-standings-scraper) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+[![Greenkeeper badge](https://badges.greenkeeper.io/tphummel/onroto-standings-scraper.svg)](https://greenkeeper.io/)[![Build Status](https://travis-ci.org/tphummel/onroto-standings-scraper.png)](https://travis-ci.org/tphummel/onroto-standings-scraper) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 [![Docker Repository on Quay](https://quay.io/repository/tomh/onroto-standings-scraper/status "Docker Repository on Quay")](https://quay.io/repository/tomh/onroto-standings-scraper)
 
 convert onroto.com standings html to json
-
-## setup
-log in to your league and then save the url to the standings page include the querystring
-
-```
-export ONROTO_HOST=baseball1.onroto.com
-export ONROTO_PATH=/baseball/webtest/display_stand.pl?leagueid&session_id=XXXYYY
-```
 
 ## usage
 
@@ -21,7 +11,15 @@ export ONROTO_PATH=/baseball/webtest/display_stand.pl?leagueid&session_id=XXXYYY
 git clone https://github.com/tphummel/onroto-standings-scraper.git oss
 cd oss
 npm install
-node ./bin.js
+
+# from html file
+curl http://baseball1.onroto.com/baseball/webtest/display_stand.pl?leagueid&session_id=XXXYYY > standings.html
+./bin/fs.js ./standings.html > standings.json
+
+# from standings url
+export ONROTO_HOST=baseball1.onroto.com
+export ONROTO_PATH=/baseball/webtest/display_stand.pl?leagueid&session_id=XXXYYY
+./bin/url.js > standings.json
 ```
 
 ## prebuilt docker image usage
