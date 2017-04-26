@@ -12,34 +12,6 @@ git clone https://github.com/tphummel/onroto-standings-scraper.git oss
 cd oss
 npm install
 
-# from html file
 curl http://baseball1.onroto.com/baseball/webtest/display_stand.pl?leagueid&session_id=XXXYYY > standings.html
-./bin/fs.js ./standings.html > standings.json
-
-# from standings url
-export ONROTO_HOST=baseball1.onroto.com
-export ONROTO_PATH=/baseball/webtest/display_stand.pl?leagueid&session_id=XXXYYY
-./bin/url.js > standings.json
-```
-
-## prebuilt docker image usage
-
-```
-docker run -it --rm -e ONROTO_HOST -e ONROTO_PATH quay.io/tomh/onroto-standings-scraper
-```
-
-## vanilla docker usage
-
-```
-git clone https://github.com/tphummel/onroto-standings-scraper.git oss
-cd oss
-npm install
-docker run -it --rm --name onroto-standings-scraper -v "$PWD":/usr/src/app -e ONROTO_HOST -e ONROTO_PATH -w /usr/src/app node:alpine node ./bin.js
-```
-
-## docker build
-
-```
-docker build .
-docker push quay.io/tomh/onroto-standings-scraper
+./bin.js ./standings.html > standings.json
 ```
