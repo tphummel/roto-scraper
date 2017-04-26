@@ -1,12 +1,15 @@
 language: node_js
-
 cache:
   directories:
   - node_modules
-
 node_js:
-  - "iojs"
-  - "iojs-1.0"
-  - "0.12"
-  - "0.11"
-  - "0.10"
+  - '7'
+  - '6'
+  - '4'
+deploy:
+  provider: npm
+  email: tphummel@gmail.com
+  on:
+    tags: true
+  api_key:
+    secure: aCETZpwD1SNJSZ44cIMJ4uaJqj3Ie29j4U83J8oTFRBNZ2cckKFwUwaa3p6Ok7Xiwze1nG5keqb5owS38nH6sWFNBTbtWNNEp5O/ldS6yzM95O3CNpB9re2MKBdNBxemGEyfMVLwTWl5flLbGOVqB4zraoiuSbnCrCBVy+FlUtY=
