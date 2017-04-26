@@ -11,7 +11,6 @@ function onDocument (err, doc) {
 
     console.log(JSON.stringify(result))
   })
-
 }
 
 function onResponse (response) {
