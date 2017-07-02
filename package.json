@@ -5,7 +5,7 @@
   "main": "index.js",
   "bin": "./bin.js",
   "dependencies": {
-    "cheerio": "^0.22.0",
+    "cheerio": "^1.0.0-rc.2",
     "moment": "^2.9.0"
   },
   "bugs": "https://github.com/tphummel/onroto-standings-scraper/issues",
