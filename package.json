@@ -33,7 +33,7 @@
   "license": "MIT",
   "optionalDependencies": {},
   "devDependencies": {
-    "standard": "^11.0.0",
+    "standard": "^14.2.0",
     "tape": "^4.6.3"
   }
 }
