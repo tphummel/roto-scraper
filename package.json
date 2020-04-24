@@ -34,6 +34,6 @@
   "optionalDependencies": {},
   "devDependencies": {
     "standard": "^13.1.0",
-    "tape": "^4.6.3"
+    "tape": "^5.0.0"
   }
 }
